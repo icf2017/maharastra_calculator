@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative '../app/models/load_models'
+require_relative '../app/models/load_model'
 require 'json'
 
 class ServeModelData < Sinatra::Base
