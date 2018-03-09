@@ -14,7 +14,7 @@ The code is written in:
 OVERVIEW
 
 The server is setup in config.ru. This:
-1. Maps /assets to a set of code that will compile the javascripts in src/javascripts and the stylesheets in src/stylesheets. It is only used in 'development' mode.
+1. Maps /assets to a set of code that will compile the javascripts in app/assets/javascripts and the stylesheets in app/assets/stylesheets. It is only used in 'development' mode.
 2. Loads three sinatra modules, all of which are in the src/ directory:
   1. redirect_old_versions.rb - looks for urls that relate to previous versions of this code, and redirects them to new urls
   2. serve_model_data.rb - looks for urls that end in /data and then returns the relevant model data which is contained in the decc_2050_model gem
@@ -22,7 +22,7 @@ The server is setup in config.ru. This:
 
 All of the underlying model calculations are in the decc_2050_model gem and not in this code.
 
-The javascripts in src/javascripts contain almost all of the important code. Once a change has been made to this code, then please run:
+The javascripts in app/assets/javascripts contain almost all of the important code. Once a change has been made to this code, then please run:
     
     rake html
 
@@ -45,7 +45,7 @@ update the version number of the decc_2050_model gem. Then:
 
 UPDATING THE VIEWS
 
-Most of the meaningful code is in the src/javascripts folder. Most of it is written in coffescript, a variant of javascript.
+Most of the meaningful code is in the app/assets/javascripts folder. Most of it is written in coffescript, a variant of javascript.
 
 1. pathways.js.coffee - contains the code that loads the model data and ensures the correct view is displayed.
 2. model_structure.js.erb - contains some javascript variables that are set based on the structure of the model, as detailed in the decc_2050_model gem

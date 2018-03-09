@@ -8,9 +8,9 @@ require './src/helper'
 # This deals with the javascript and css
 Rake::SprocketsTask.new do |t|
   environment = Sprockets::Environment.new
-  environment.append_path 'src/javascripts'
-  environment.append_path 'src/stylesheets'
-  environment.append_path 'contrib'
+  environment.append_path 'app/assets/javascripts'
+  environment.append_path 'app/assets/stylesheets'
+  environment.append_path 'app/assets/vendors'
 
   environment.context_class.class_eval do 
     include Helper
