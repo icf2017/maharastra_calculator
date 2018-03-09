@@ -10,17 +10,14 @@ http://github.com/iept/iess_v2
 
 # Installation
 
-See script/setup-2050-server-script.sh for an example of how to setup a server from a clean bare Ubuntu linux installation.
-
-Otherwise:
-1. Install ruby-2.4.2
+1. Install Ruby dependency `ruby-2.4.2`
 2. `gem install bundler`
-3. bundle install
+3. `bundle install`
 
 # Running the web-app
 
 1. Run the app by starting the puma server. `puma -e <environment>`
-3. Navigate to http://0.0.0.0:9292 in your web browser
+3. Navigate to http://localhost:9292 in your web browser
 
 # BugBounty
 
