@@ -12,7 +12,7 @@ map '/' do
   use Rack::CommonLogger
   map '/assets' do
     require 'sprockets'
-    require './src/helper'
+    require 'app/helpers/helper'
     environment = Sprockets::Environment.new
 
     environment.append_path 'app/assets/javascripts'

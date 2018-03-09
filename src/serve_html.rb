@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'haml'
-require_relative 'helper'
+require_relative '../app/helpers/helper'
 
 # This has the methods needed to dynamically create the view
 class ServeHTML < Sinatra::Base

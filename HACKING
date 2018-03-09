@@ -60,7 +60,7 @@ UPDATING THE EXAMPLE PATHWAYS
 
 The example pathways are listed in:
 
-    src/helper.rb
+    app/helpers/helper.rb
 
 UPDATING THE ONE PAGE NOTES
 

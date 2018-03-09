@@ -3,7 +3,7 @@
 require 'sprockets'
 require 'rake/sprocketstask'
 require 'app/model/load_model'
-require './src/helper'
+require 'app/helpers/helper'
 
 # This deals with the javascript and css
 Rake::SprocketsTask.new do |t|
@@ -25,7 +25,7 @@ end
 
 require 'haml'
 require 'json'
-require_relative 'src/helper'
+require_relative 'app/helpers/helper'
 
 manifest = './public/assets/manifest.json'
 file manifest => ['assets']  
