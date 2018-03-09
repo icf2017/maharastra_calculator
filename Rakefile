@@ -2,7 +2,7 @@
 # coding: utf-8
 require 'sprockets'
 require 'rake/sprocketstask'
-require './model/load_model'
+require 'app/model/load_model'
 require './src/helper'
 
 # This deals with the javascript and css

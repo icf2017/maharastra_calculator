@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative '../model/load_model'
+require_relative '../app/models/load_models'
 require 'json'
 
 class ServeModelData < Sinatra::Base
@@ -13,6 +13,5 @@ class ServeModelData < Sinatra::Base
     content_type :json # We return json
     ModelResult.calculate_pathway(id).to_json
   end
-
 
 end
