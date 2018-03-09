@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 # Framework
-gem 'sinatra'
+gem 'sinatra', '2.0.0'
 
 # Views
 gem 'json'
@@ -9,7 +9,7 @@ gem 'haml'
 gem 'uglifier'#, '>= 1.0.3'
 gem 'sprockets'
 gem 'coffee-script'
-gem 'thin'
+gem 'puma', '3.11.3'
 
 # Model
 gem 'ffi'
