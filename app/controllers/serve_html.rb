@@ -9,11 +9,21 @@ class ServeHTML < Sinatra::Base
     helpers Helper
     set :views, File.expand_path('../../views', __FILE__)
 
-    get '*' do
+    get '/' do
       haml :'default.html'
     end
+
+    get %r{/pathways/(\d{59})/(.*)} do |id, action|
+      haml :'default.html'
+    end
+
   else
-    get '*' do 
+
+    get '/' do
+      send_file 'public/default.html'
+    end
+
+    get %r{/pathways/(\d{59})/(.*)} do |id, action|
       send_file 'public/default.html'
     end
   end
