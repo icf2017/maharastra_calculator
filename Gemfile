@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+
 # Framework
 gem 'sinatra', '2.0.0'
 
@@ -6,9 +7,10 @@ gem 'sinatra', '2.0.0'
 gem 'json'
 gem 'sass'
 gem 'haml'
-gem 'uglifier'#, '>= 1.0.3'
 gem 'sprockets'
 gem 'coffee-script'
+
+# Server
 gem 'puma', '3.11.3'
 
 # Model
@@ -20,5 +22,11 @@ gem 'excel_to_code', '>= 0.3.16'
 # gem 'india_2052_model', "1.0.6pre"
 
 group :development do
+  # Rack reloader
   gem 'shotgun'
+
+  # Minifier
+  gem 'yui-compressor'
+  gem 'uglifier'#, '>= 1.0.3'
+
 end
