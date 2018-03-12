@@ -3,8 +3,8 @@ require 'rubygems'
 require 'bundler'
 Bundler.setup
 
-require './src/serve_model_data'
-require './src/serve_html'
+require './app/controllers/serve_model_data'
+require './app/controllers/serve_html'
 
 ENV['RACK_ENV'] = ENV['RAILS_ENV'] if ENV['RAILS_ENV']
 

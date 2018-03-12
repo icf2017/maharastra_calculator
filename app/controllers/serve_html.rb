@@ -1,13 +1,13 @@
 require 'sinatra'
 require 'haml'
-require_relative '../app/helpers/helper'
+require_relative '../../app/helpers/helper'
 
 # This has the methods needed to dynamically create the view
 class ServeHTML < Sinatra::Base
   if development?
 
     helpers Helper
-    set :views, settings.root 
+    set :views, File.expand_path('../../views', __FILE__)
 
     get '*' do
       haml :'default.html'
