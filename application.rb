@@ -42,6 +42,10 @@ class Application < Sinatra::Base
   environment.js_compressor  = :uglify
   environment.css_compressor = :scss
 
+  environment.context_class.class_eval do
+    include Helper
+  end
+
   # get assets
   get "/assets/*" do
     env["PATH_INFO"].sub!("/assets", "")
