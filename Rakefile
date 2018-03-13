@@ -13,10 +13,10 @@ require_relative 'app/helpers/helper'
 
 
 namespace :test do
-  # desc "Run models tests"
-  # task :models do
-  #   ruby "test/models/*_test.rb"
-  # end
+  desc "Run models tests"
+  task :models do
+    ruby "test/models/*_test.rb"
+  end
 
   desc "Run routes tests"
   task :controllers do
@@ -28,7 +28,7 @@ namespace :test do
     ruby "test/acceptance/*_test.rb"
   end
 
-  task :all => [:controllers, :acceptance]
+  task :all => [:models, :controllers, :acceptance]
 end
 
 # This deals with the javascript and css
