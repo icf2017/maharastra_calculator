@@ -6,8 +6,30 @@ require 'json'
 require 'yui/compressor'
 require 'uglifier'
 require 'rake/sprocketstask'
-require './app/models/load_model'
-require './app/helpers/helper'
+require 'rake/testtask'
+
+require_relative 'app/models/load_model'
+require_relative 'app/helpers/helper'
+
+
+namespace :test do
+  # desc "Run models tests"
+  # task :models do
+  #   ruby "test/models/*_test.rb"
+  # end
+
+  desc "Run routes tests"
+  task :controllers do
+    ruby "test/controllers/*_test.rb"
+  end
+
+  desc "Run acceptance tests"
+  task :acceptance do
+    ruby "test/acceptance/*_test.rb"
+  end
+
+  task :all => [:controllers, :acceptance]
+end
 
 # This deals with the javascript and css
 Rake::SprocketsTask.new do |t|
@@ -48,5 +70,3 @@ task 'html' => [manifest] do
     f.puts Haml::Engine.new(input).render(context)
   end
 end
-
-

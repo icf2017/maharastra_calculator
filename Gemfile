@@ -30,3 +30,8 @@ group :development do
   gem 'uglifier'#, '>= 1.0.3'
 
 end
+
+group :test do
+  gem "rack-test"
+  gem "capybara-webkit"
+end
