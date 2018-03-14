@@ -12,7 +12,8 @@ class ModelResult < ModelUtilities
   end
   
   def calculate_pathway(code)
-    Thread.exclusive do 
+    mutex_for_require = Mutex.new
+    mutex_for_require.synchronize do
       reset
       @pathway = { _id: code, choices: set_choices(code) }
       sankey_table
