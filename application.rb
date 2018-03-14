@@ -1,6 +1,5 @@
 require 'sinatra/base'
 require 'sprockets'
-require 'uglifier'
 require 'sass'
 require 'coffee-script'
 require 'execjs'
@@ -37,10 +36,6 @@ class Application < Sinatra::Base
   environment.append_path "app/assets/stylesheets"
   environment.append_path "app/assets/vendors"
   environment.append_path "app/assets/javascripts"
-
-  # compress assets
-  environment.js_compressor  = :uglify
-  environment.css_compressor = :scss
 
   environment.context_class.class_eval do
     include Helper
