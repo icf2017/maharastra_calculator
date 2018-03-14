@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 # Framework
-gem 'sinatra', '2.0.0'
+gem 'sinatra', '2.0.1'
 
 # Views
 gem 'json'
