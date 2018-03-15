@@ -18,10 +18,10 @@ set :pty, true
 
 set :log_level, :debug
 
-# append :linked_files, 'config/puma.rb'
+append :linked_files, 'app/models/libmodel.so'
 
 # Default value for linked_dirs is []
-# append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
 
 set :keep_releases, 5
 
@@ -30,3 +30,11 @@ set :ssh_options, {
   forward_agent: true,
   keys: %w(~/.ssh/id_rsa)
 }
+
+namespace :deploy do
+  after :starting, :ensure_compiled_model do
+    on roles(:app) do
+      execute "cd '#{release_path}'; /usr/local/rvm/bin/rvm default do ruby app/models/compile_c_version_if_needed.rb"
+    end
+  end
+end
