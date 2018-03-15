@@ -1,3 +1,4 @@
 libmodel.so
-
+libmodel.dylib
 model/
+model.o
