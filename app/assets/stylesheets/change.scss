@@ -127,8 +127,10 @@
 .btn-default:hover {
   color: #333 !important;
 }
+
 .popover{
-  width: 350px;
+  width: 500px;
+  max-width: 500px !important;
 }
 .popover-content{
   text-align: center;

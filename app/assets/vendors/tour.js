@@ -8,9 +8,8 @@ $(window).load(function () {
 
   tour.addSteps([
     {
-      element: "body",
+      orphan: true,
       placement: "top",
-      template: "<div class='popover cls-center tour'><h3 class='popover-title'></h3><div class='popover-content'></div><div class='popover-navigation'><button class='btn btn-sm btn-default' data-role='next'>Start Tour »</button><button class='btn btn-default' data-role='end'>Enter Calculator</button></div></div>",
       backdrop: true,
       title: "Welcome to India Energy Security Scenarios, 2047",
       content: "The IESS, 2047 is an energy scenario building tool, which aims to explore a range of potential future energy scenarios for India, for diverse energy demand and supply sectors, leading up to 2047.<br/> <br/> 21 Energy Demand and Supply sectors, and 50 levers that will impact our energy system are available to the user. Combination of the above choices offer hundreds of energy pathways till the year 2047.",

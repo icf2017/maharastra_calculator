@@ -1,0 +1,21 @@
+/*
+ *= require bootstrap-tour-standalone.min
+ */
+
+@import "bootstrap";
+
+@import "change";
+@import "controls";
+@import "footer";
+@import "my_story";
+@import "pathways";
+@import "sankey";
+@import "simple_sankey";
+@import "story";
+@import "tooltip";
+@import "topbar";
+@import "userguide";
+
+#results {
+    /*clear: both;*/
+}
