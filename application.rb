@@ -35,6 +35,7 @@ class Application < Sinatra::Base
 
   # append assets paths
   environment.append_path "app/assets/stylesheets"
+  environment.append_path "node_modules/"
   environment.append_path "app/assets/vendors"
   environment.append_path "app/assets/javascripts"
 

@@ -6,10 +6,10 @@
 //
 
 // First the support libs
-//= require jquery142
+//= require jquery/dist/jquery.js
 //= require jquery.jsonplugin.min
 //= require bootstrap
-//= require bootstrap-tour-standalone.min
+//= require bootstrap-tour/build/js/bootstrap-tour-standalone.js
 //= require tour
 
 //= require highcharts
@@ -20,7 +20,7 @@
 //= require customEvents
 //= require shims
 //= require d3.min
-//= require raphael.min
+//= require raphael/raphael-min.js
 //= require jstorage.min
 //= require sankey
 

@@ -13,6 +13,7 @@ http://github.com/iept/iess_v2
 1. Install Ruby dependency `ruby-2.4.2`
 2. `gem install bundler`
 3. `bundle install`
+4. `npm install`
 
 # Running the web app
 
