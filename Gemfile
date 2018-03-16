@@ -7,8 +7,12 @@ gem 'sinatra', '2.0.1'
 gem 'json'
 gem 'sass'
 gem 'haml'
-gem 'sprockets'
 gem 'coffee-script'
+
+gem 'sprockets', '3.7.1'
+
+# Bootstrap
+gem 'bootstrap', '~> 4.0.0'
 
 # Server
 gem 'puma', '3.11.3'

@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sprockets'
+require 'bootstrap'
 require 'sass'
 require 'coffee-script'
 require 'execjs'
