@@ -5,6 +5,7 @@
   height: 505px;
   float: left;
 }
+
 .sankeytitle {
   margin: 0;
   text-align: center;
@@ -16,9 +17,10 @@
   padding: 0px;
   text-align: center;
 }
-.toggle_radio{
+
+.toggle_radio {
   position: relative;
-  background: rgba(50,50,50,.1);
+  background: rgba(50, 50, 50, .1);
   margin: 4px auto;
   overflow: hidden;
   padding: 0 !important;
@@ -30,18 +32,21 @@
 
   /*width: 318px;*/
   display: inline-block;
-  left:5%;
+  left: 5%;
 }
+
 .toggle_radio > * {
   float: left;
 }
-.toggle_radio input[type=radio]{
+
+.toggle_radio input[type=radio] {
   display: none;
   /*position: fixed;*/
 }
-.toggle_radio label{
+
+.toggle_radio label {
   font: 90%/1.618 "Source Sans Pro";
-  color: rgba(50,50,50,.9);
+  color: rgba(50, 50, 50, .9);
   z-index: 0;
   display: block;
   width: 94px;
@@ -55,9 +60,11 @@
   /*background: rgba(0,0,0,.1);*/
   text-align: center;
   /*margin: 0 2px;*/
-  /*background: blue;*/ /*make it blue*/
+  /*background: blue;*/
+  /*make it blue*/
 }
-.toggle_option_slider{
+
+.toggle_option_slider {
   /*display: none;*/
   /*background: red;*/
   width: 100px;
@@ -72,10 +79,10 @@
   -o-transition: all .4s ease;
   -ms-transition: all .4s ease;
   transition: all .4s ease;
-  pointer-events:none;
+  pointer-events: none;
 }
 
-.toggle_option:checked ~ .toggle_option_slider{
-  background: rgba(50,50,50,.3);
+.toggle_option:checked ~ .toggle_option_slider {
+  background: rgba(50, 50, 50, .3);
   left: 215px;
 }
