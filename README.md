@@ -18,6 +18,7 @@ http://github.com/iept/iess_v2
 # Running the web app
 
 ### Development
+
   1. We use hot reloading of RackApp. Use `shotgun` to start the server.
   2. Navigate to http://localhost:9393 in your web browser
 
@@ -25,6 +26,12 @@ http://github.com/iept/iess_v2
 
   1. Run the app by starting the puma server. `puma -e <environment>`
   2. Navigate to http://localhost:9292 in your web browser
+
+## Deployment
+
+  1. Run `rake test:all` to run all the tests
+  2. Run `rake assets` to precompile all the assets
+  3. Run `cap <environment> deploy` to deploy to the server.
 
 # Tests
 

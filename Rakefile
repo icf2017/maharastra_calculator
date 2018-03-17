@@ -1,6 +1,7 @@
 #!/usr/bin/env rake
 # coding: utf-8
 require 'sprockets'
+require 'bootstrap'
 require 'haml'
 require 'json'
 require 'yui/compressor'
@@ -34,6 +35,7 @@ end
 # This deals with the javascript and css
 Rake::SprocketsTask.new do |t|
   sprockets = Sprockets::Environment.new
+  sprockets.append_path 'node_modules'
   sprockets.append_path 'app/assets/javascripts'
   sprockets.append_path 'app/assets/stylesheets'
   sprockets.append_path 'app/assets/vendors'
