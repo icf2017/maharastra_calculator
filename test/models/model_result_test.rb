@@ -1,5 +1,3 @@
-require 'minitest/autorun'
-
 require_relative '../../application'
 require_relative '../test_helper'
 

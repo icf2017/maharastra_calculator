@@ -1,7 +1,7 @@
 require_relative '../../application'
 require_relative '../test_helper'
 
-class ServeHTMLTest < Test::Unit::TestCase
+class ServeHTMLTest < MiniTest::Unit::TestCase
   include Rack::Test::Methods
 
   def app
