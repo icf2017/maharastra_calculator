@@ -30,7 +30,7 @@ http://github.com/iept/iess_v2
 ## Deployment
 
   1. Run `rake test:all` to run all the tests
-  2. Run `rake assets` to precompile all the assets
+  2. Run `rake asset:pipeline` to precompile all the assets  
   3. Run `cap <environment> deploy` to deploy to the server.
 
 # Tests
