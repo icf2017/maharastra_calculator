@@ -149,54 +149,7 @@
   }
 }
 
-ul.menu_0 {
-  float: left;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  width: 83%;
-  li {
-    display: inline-block;
-    width: 100%;
-    float: left;
-    a {
-      float: left;
-      margin: 0;
-      background-color: #fff;
-      img {
-        width: 300px;
-        margin-right: 35px;
-      }
-    }
-    div {
-      font-weight: bold;
-      text-decoration: none;
-      float: left;
-      line-height: 56px;
-      background-color: #fff;
-      p {
-        float: left;
-        color: #154c85;
-        font-size: 15px;
-        margin: 0;
-      }
-      span {
-        float: left;
-        color: #8F0000;
-        font-size: 14px;
-        font-weight: normal;
-      }
-    }
-  }
-}
-
 ul.menu_1 {
-  float: right;
-  margin: 13px 0 5px;
-  padding: 0;
-  text-align: right;
-  width: 17%;
-  background-color: #fff;
 
   li {
     cursor: pointer;
@@ -226,35 +179,6 @@ ul.menu_1 {
   #messages {
     background-color: #6191ff;
   }
-}
-
-ul.menu_2 {
-  background-color: #154c85;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
-  color: #fff;
-  display: inline-block;
-  float: left;
-  margin: 0 0 15px;
-  padding: 0;
-  text-align: center;
-  width: 100%;
-
-  li {
-    border-left: 1px solid #fff;
-    display: inline-block;
-    margin: 5px 0px;
-    padding: 0 7px;
-
-    a {
-      color: #fff;
-      font-size: 12px;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
-  }
-
 }
 
 ul.menu li:hover {
@@ -310,8 +234,4 @@ ul.menu_1 li:hover ul {
 
 #calculating {
   width: 77px;
-}
-
-ul.menu_2 li:first-child {
-  border-left: none;
 }

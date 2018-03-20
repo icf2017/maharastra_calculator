@@ -62,13 +62,13 @@ $(document).ready(function(){
     var arr = {'primary_energy_chart': 'All Energy','primary_energy_detail_chart': 'All Energy','primary_energy_overview_chart': 'All Energy', 'primary_energy_overview_chart': 'All Energy','electricity': 'Electricity','energy_security': 'Energy Security', 'emissions': 'Energy Emissions', 'sankey': 'Energy Flow','map': 'Land Requirement','grid_balancing_summer': 'Grid Balancing', 'grid_balancing_monsoon': 'Grid Balancing', 'grid_balancing_winter': 'Grid Balancing', 'total_cost': 'Energy Costs', 'costs': 'Energy Costs', 'costsYear': 'Energy Costs', 'my_story': 'My Story', 'assumptions': 'Assumptions'};
 
     var tabHeading= window.location.pathname.split("/").slice(3, 4);
-    $("ul.menu_0 p").html(arr[tabHeading]+' -&nbsp;');
+    $(".breadcrumb li:first").html(arr[tabHeading]);
 
-    var $targetElement = $("ul.menu_2 a");           
+    var $targetElement = $("ul.navbar-nav a.nav-link");
     $targetElement.click(function() {
        var tabHeading= window.location.pathname.split("/").slice(3, 4);
        var pathText = $("#pathway_box select option:selected").text();
-       $("ul.menu_0 p").html(arr[tabHeading]+' -&nbsp;');
+       $(".breadcrumb li:first").html(arr[tabHeading]);
     });
 
     $('#pathway_box select').on("change",function() {
@@ -77,7 +77,7 @@ $(document).ready(function(){
       $( "#pathway_box select option:selected" ).each(function() {
         str =  $( this ).text();
       });
-      $("ul.menu_0 span").html(str);
+      $(".breadcrumb li:last").html(str);
     });
 
 });

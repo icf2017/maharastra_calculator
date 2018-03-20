@@ -68,7 +68,6 @@ highData = (n, series, hide, name) ->
     $("#display-data" + n + " #SeriesName").empty()
   return
 clickItem = (chartSeries, series, $legendItem, options, vCls) ->
-  #console.log($legendItem)
   #alert(va)
   #alert(options)
 
@@ -89,7 +88,6 @@ clickItem = (chartSeries, series, $legendItem, options, vCls) ->
   return
 
 ViewAllSeries = (chartSeries, vCls, va = null) ->
-  console.log(chartSeries)
   $.each chartSeries, (i, seri) ->
     #alert(seri.name)
     seri.setVisible(true)  
@@ -166,7 +164,6 @@ callCommon = (chartIdArr) ->
 callLegand = (options0, chartSeries, l_index, chart_name) ->
   #alert(chart_name)
   #chartSeries = chartSeries[l_index]
-  #console.log(chartSeries)
   # create the legend item
   $.each chartSeries, (i, series) -> 
     if series.name is 'Total demand' or series.name is 'Total supply' or series.name is 'Total'         

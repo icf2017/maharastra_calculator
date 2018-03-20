@@ -48,7 +48,6 @@ class costsYear
     while i < 8
       data.push([@pathway['increamental_table'][window.twentyfifty.views.costsYear.curYear][i][0], @pathway['increamental_table']['2047'][i][1]])  
       i++
-    console.log(data)  
     if @increamentalYear_chart.series[0]?
       @increamentalYear_chart.series[0].setData(data,false)
     else

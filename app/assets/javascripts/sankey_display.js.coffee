@@ -46,7 +46,6 @@ class SankeyDisplay
       @s.draw()
       @drawn = true
     max_y = @s.boxes['losses'].b()
-    # console.log max_y
     @s.redraw()
     if $('#sankey').height() < max_y
       $('#sankey').height(max_y)

@@ -288,7 +288,6 @@ class PrimaryEnergy
     @dependency_chart = null
 
   updateResults: (@pathway) ->
-    console.log @pathway
     @setup() unless @dependency_chart? && @final_energy_chart? && @primary_energy_chart?
 
     titles_dependency = ['Coal',

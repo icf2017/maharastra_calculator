@@ -158,8 +158,6 @@ class ElectricityAnalysis
 
     data = [{y:@pathway['electricity']['demand']['Transport'][7], color:'#f44545'},{y:@pathway['electricity']['demand']['Industry'][7], color: '#CC6699'}, {y:@pathway['electricity']['demand']['Cooking'][7], color:'#709d40'},{y:@pathway['electricity']['demand']['Buildings'][7], color: '#FF9900'},{y:@pathway['electricity']['demand']['Telecom'][7], color:'#0f6b62'},@pathway['electricity']['demand']['Pumps& Tractors'][7]]
 
-    console.log data
-
     if @demand_analysis.series[0]?
       @demand_analysis.series[0].setData(data)
     else

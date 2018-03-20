@@ -27,7 +27,7 @@ setUpControls = () ->
   $("a[title]").tooltip({delay: 0, position: 'top right', offset:[0,0],tip:'#tooltip'})
   $("a.choiceLink").click( (event) ->
     event.preventDefault()
-    $("ul.menu_0 span").html('Your Chosen Pathway');
+    $(".breadcrumb li:last").html('Your Chosen Pathway');
     $("#pathway_box select").val(0)
     t = $(event.target)
     c = t.data().choicenumber
@@ -289,7 +289,7 @@ Array::allValuesSame = ->
   true
 
 groupclick = (fraction, groupArr, grouplevel)->
-  $("ul.menu_0 span").html('Your Chosen Pathway') 
+  $(".breadcrumb li:last").html('Your Chosen Pathway')
   $("#pathway_box select").val(0)
   old_choices = choices.slice(0)
   if fraction

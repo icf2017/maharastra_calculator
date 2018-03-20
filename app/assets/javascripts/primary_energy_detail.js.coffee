@@ -189,7 +189,6 @@ class PrimaryEnergyDetail
     for name in titles
 
       data = [@pathway['final_energy_demand'][name][0], @pathway['final_energy_demand'][name][7]]
-      #console.log data
       if @energy_demand_chart.series[i]?
         @energy_demand_chart.series[i].setData(data,false)
       else

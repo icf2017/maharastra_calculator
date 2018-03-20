@@ -349,8 +349,6 @@ class PrimaryEnergyOverview
     
     @setup() unless @energy_comparison_chart? && @energy_supply_chart?
  
-    console.log @energy_comparison_chart
-
     #drill = ["Transport","Cooking","Buildings","Pumps& Tractors"]
 
     drillTransport = {name:"Transport", id:"Transport",data:[["Road transport",@pathway['demand_year'][2047][6][1]],["Rail transport",@pathway['demand_year'][2047][7][1]],["Domestic aviation",@pathway['demand_year'][2047][8][1]]], type:'	'}

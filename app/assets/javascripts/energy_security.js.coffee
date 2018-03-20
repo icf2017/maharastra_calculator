@@ -318,7 +318,6 @@ class EnergySecurity
 
     for name in titles_import_costs
       data = @pathway['import_costs'][name]
-      #console.log(data)
       if @import_costs_chart.series[i]?
         @import_costs_chart.series[i].setData(data,false)
       else
@@ -330,7 +329,6 @@ class EnergySecurity
     titles_import_proportion = ["Coal", "Oil", "Gas"]
 
     data = @pathway['import_proportions']['Total']
-    console.log(data)
     if @import_proportion_chart.series[i]?
       @import_proportion_chart.series[i].setData(data,false)
     else

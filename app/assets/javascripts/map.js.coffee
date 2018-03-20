@@ -170,7 +170,6 @@ class LandUse
 
     for name in titles_land_do_nothing
       data = @pathway['land_do_nothing'][name]
-      #console.log(data[1])
       dnsum += data[0]
       ypsum += data[1]
 
@@ -195,7 +194,6 @@ class LandUse
     #remaining = @pathway['land_do_nothing']["India's Land Area"][1] - @pathway['land_do_nothing']["Total"][1]
 
     data = [{name:"Bio Energy",y: @pathway['land_do_nothing']["Bio Energy"][1]}, {name:"Conventional", y:@pathway['land_do_nothing']["Conventional"][1]},{name: "Renewables", y:@pathway['land_do_nothing']["Renewables"][1]}]
-    console.log(data)
     if @land_map.series[0]?
       @land_map.series[0].setData(data,false)
     else

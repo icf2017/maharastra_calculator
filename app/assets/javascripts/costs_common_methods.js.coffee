@@ -129,7 +129,6 @@ cost_override_in_place_warning = () ->
 adjust_costs_of_pathway = (pathway) ->
   total = { low: 0, range: 0, high: 0, finance_max:0}
   for own name,values of pathway.cost_components
-    # console.log name, values if name == "Conventional thermal plant"
     #unless name == 'Finance cost'
     fraction_of_width = jQuery.jStorage.get(name,null)
     # Check if someone has set a preference

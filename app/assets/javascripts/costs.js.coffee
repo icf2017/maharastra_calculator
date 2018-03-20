@@ -176,7 +176,6 @@ class CostsNew
 
     data_percent = []
     data_path = [@pathway['increamental_costs']["Your Pathway"]]
-    console.log(data_path)
     data_percent[0] = Math.round((data_path[0]*100)* 100) / 100
  
     $("#pathway b").html(data_percent[0]+'%')  
