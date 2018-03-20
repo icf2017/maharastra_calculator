@@ -93,7 +93,7 @@ class costsYear
     document.getElementById("warning").style.display = "none"
     $('#warning').empty()
     $('#display').empty()
-    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='' onclick='twentyfifty.switchView(\"total_cost\")'>Total Energy Cost</a></li><li><a href='#' id='energy-subnav-1' onclick='twentyfifty.switchView(\"costs\")'>Cost Overview</a></li><li><a href='#' id='energy-subnav-2' class='selected' onclick='twentyfifty.switchView(\"costsYear\")'>Differential Cost Year-wise</a></li></ul>")
+    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='btn btn-default' onclick='twentyfifty.switchView(\"total_cost\")'>Total Energy Cost</a></li><li><a href='#' class='btn btn-default' id='energy-subnav-1' onclick='twentyfifty.switchView(\"costs\")'>Cost Overview</a></li><li><a href='#' id='energy-subnav-2' class='selected btn btn-default' onclick='twentyfifty.switchView(\"costsYear\")'>Differential Cost</a></li></ul>")
 
 
     window.increamentalYear = @increamentalYear_chart = new Highcharts.Chart({

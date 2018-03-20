@@ -21,7 +21,7 @@ class EnergySecurity
     $('#warning').empty()
     $('#display').empty()
  
-    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='selected' onclick=''>Fossil Fuel Imports and Costs</a></li><li style='display:none'><a href='#' id='energy-subnav-2' class='' onclick=''>Energy Security 2</a></li><li style='display:none'><a href='#' id='energy-subnav-3' class='' onclick=''>Energy Security 3</a></li></ul>")
+    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='selected' onclick=''>Fossil Fuel Imports and Costs</a></li></ul>")
 
     @dependency_chart = new Highcharts.Chart({
       chart: { renderTo: 'dependency_chart', type: 'line', height: 250, width: 300 },

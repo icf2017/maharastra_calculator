@@ -1,6 +1,8 @@
 // Place all the styles related to the pathways controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap/_variables";
+
 body {
   //font-family: Lucida Grande,Lucida Sans Unicode,Verdana,Arial,Helvetica,sans-serif;
   font-family: sans-serif;
@@ -38,7 +40,7 @@ body {
   margin: 0;
   width: 10%;
   display: block;
-  padding-left: 10px;
+  padding: 0px;
 
   div.diaplay_nav {
     float: left;
@@ -54,20 +56,14 @@ body {
 
     ul.subnav {
       width: 100%;
-      float: left;
       margin: 0;
-      padding-left: 10px;
-      background-color: #fff;
-      display: block;
+      padding: 0px;
 
       li {
         font-size: 10px;
         color: #154c85;
-        a {
-          color: #4d759e;
-          text-decoration: none;
-          font-size: 8pt;
-        }
+        list-style: none;
+        margin: 5px 0px;
       }
 
     }
@@ -82,7 +78,7 @@ div.warning_option {
   display: none;
   border: 2px solid #154c85;
 
-  h4 {
+  h6 {
     color: #910000;
     float: left;
     margin: 0 0 5px;
@@ -114,7 +110,7 @@ div.warning_option {
 }
 
 .subnav .selected {
-  color: #333 !important;
+  color: $primary !important;
 }
 
 #SeriesData0 {

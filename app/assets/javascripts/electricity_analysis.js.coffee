@@ -15,7 +15,7 @@ class ElectricityAnalysis
 
     $('#display').empty()
  
-    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='' onclick='twentyfifty.switchView(\"electricity\")'>Electricity Demand and Supply</a></li><li><a href='#' id='energy-subnav-2' class='selected' onclick='twentyfifty.switchView(\"electricity_analysis\")'>Analysis of Electricity Share</a></li><li style='display:none'><a href='#' id='energy-subnav-3' class='' onclick=''>Electricity 3</a></li></ul>")
+    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='btn btn-default' onclick='twentyfifty.switchView(\"electricity\")'>Demand and Supply</a></li><li><a href='#' id='energy-subnav-2' class= 'btn btn-default selected' onclick='twentyfifty.switchView(\"electricity_analysis\")'>Analysis of Electricity Share</a></li><li style='display:none'><a href='#' id='energy-subnav-3' class='btn btn-defaut' onclick=''>Electricity 3</a></li></ul>")
 
    
     document.getElementById("results").style.overflow = "inherit"

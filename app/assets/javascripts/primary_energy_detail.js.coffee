@@ -20,7 +20,7 @@ class PrimaryEnergyDetail
     $('#warning').empty()
     $('#display').empty()
 
-    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='' onclick='twentyfifty.switchView(\"primary_energy_chart\")'>Energy Demand & Supply</a></li><li><a href='#' id='energy-subnav-2' class='' onclick='twentyfifty.switchView(\"primary_energy_overview_chart\")'>Sector-wise Drilldown</a></li><li><a href='#' id='energy-subnav-3' class='selected' onclick='twentyfifty.switchView(\"primary_energy_detail_chart\")'>Compare 2012 and 2047</a></li></ul>")
+    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='btn btn-default' onclick='twentyfifty.switchView(\"primary_energy_chart\")'>Demand & Supply</a></li><li><a href='#' id='energy-subnav-2' class='btn btn-default' onclick='twentyfifty.switchView(\"primary_energy_overview_chart\")'>Sector-wise Drilldown</a></li><li><a href='#' id='energy-subnav-3' class='selected btn btn-default' onclick='twentyfifty.switchView(\"primary_energy_detail_chart\")'>2012 vs 2047</a></li></ul>")
     
     #$('#warning').append("<h5>Warning</h5>")
     @energy_demand_chart = new Highcharts.Chart({

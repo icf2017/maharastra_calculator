@@ -19,7 +19,7 @@ class GridBalancingSummer
     $('#warning').empty()
     $('#display').empty()
  
-    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='selected' onclick='twentyfifty.switchView(\"grid_balancing_summer\")'>Typical Summer Day</a></li><li><a href='#' id='energy-subnav-2' class='' onclick='twentyfifty.switchView(\"grid_balancing_monsoon\")'>Typical Monsoon Day</a></li><li><a href='#' id='energy-subnav-3' class='' onclick='twentyfifty.switchView(\"grid_balancing_winter\")'>Typical Winter Day</a></li></ul>")
+    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='btn btn-default selected' onclick='twentyfifty.switchView(\"grid_balancing_summer\")'>Typical Summer Day</a></li><li><a href='#' id='energy-subnav-2' class='btn btn-default' onclick='twentyfifty.switchView(\"grid_balancing_monsoon\")'>Typical Monsoon Day</a></li><li><a href='#' id='energy-subnav-3' class='btn btn-default' onclick='twentyfifty.switchView(\"grid_balancing_winter\")'>Typical Winter Day</a></li></ul>")
     
     #$('#warning').append("<h5>Warning</h5>")
 
