@@ -1,2 +1,7 @@
+$color-black: #0E0E0E;
+$color-black-light: #575757;
 
-$color-black: #000
+$navbar-light-color: $color-black !default;
+$navbar-light-hover-color: $color-black-light !default;
+$navbar-nav-link-padding-x: 0.3rem  !default;
+$navbar-nav-link-padding-y: 0.3rem  !default;

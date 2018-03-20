@@ -46,11 +46,11 @@
       #pathway_box
         Create your own pathway by selecting effort levels 1 to 4 for each sector or choose an example pathway.
         %select{:onchange => "if(this.value == 0 ) return false; else twentyfifty.switchPathway(this.value);"}
-          %option{:value => 0}= "------Choose from Example Scenarios------"
+          %option{:value => 0}= "Choose from Example Scenarios"
           - saved_pathways.each do |name,code|
             %option{:value => code}= name
 
-      #classic_controls.tour_2
+      #classic_controls.row
         #demand.tour_3
           <h2 data-step="1" data-intro="This is a tooltip!">Demand</h2>
           %table
