@@ -29,24 +29,60 @@
     position: relative;
   }
 
+  @media only screen and (max-width: 600px) {
+    #demand, #supply, #other, #electricity, #guide {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 900px) {
+    #demand, #supply, #other, #electricity, #guide {
+      width: 49%;
+      float: left;
+    }
+    #guide {
+      width: 49% !important;
+      float: left;
+    }
+  }
+
+  @media (min-width: 900px) and (max-width: 1200px) {
+    #demand, #supply, #other, #electricity, #guide {
+      width: 40%;
+      float: left;
+    }
+    #guide {
+      width: 33% !important;
+      float: left;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #demand, #supply, #other, #electricity, #guide {
+      width: 28%;
+      float: left;
+    }
+
+    #guide {
+      width: 11% !important;
+      float: right;
+    }
+  }
+
   #demand, #supply, #other, #electricity, #guide {
     border: 1px solid;
     border-radius: 5px;
-    float: left;
     margin: 0 0.5% 1.5%;
     padding: 0 0 5px 0;
-    width: 28%;
   }
 
   #guide {
-    width: 11% !important;
-    float: right;
     table tr {
       border-bottom: 1px solid #aaa;
       height: 25px;
-
     }
   }
+
 
   table {
     width: 90%;
