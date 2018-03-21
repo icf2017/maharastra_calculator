@@ -109,6 +109,12 @@ div.warning_option {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  div.warning_option {
+    width: 100% !important;
+  }
+}
+
 .subnav .selected {
   color: $primary !important;
 }
