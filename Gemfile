@@ -44,4 +44,5 @@ group :test do
   gem 'minitest'
   gem 'rack-test'
   gem 'capybara-webkit'
+  gem 'launchy'
 end

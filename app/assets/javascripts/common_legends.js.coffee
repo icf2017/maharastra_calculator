@@ -1,20 +1,15 @@
 highlightLegend = (box_id, item, hide) ->
-  legend_text = "legend-item"+item
+  legend_text = "legend-item" + item
   if hide
-    #alert "#"+box_id+ " ."+legend_text
-    $("#"+box_id+ " div."+legend_text).addClass('legend-show');
+    $("#" + box_id + " div." + legend_text).addClass('legend-show');
   else
-    $("#"+box_id+ " div."+legend_text).removeClass('legend-show');
+    $("#" + box_id + " div." + legend_text).removeClass('legend-show');
   return
 
 highlight = (series, index, hide) ->
   $(series).each (i, serie) ->
     unless i is index
-      
-      #serie.area.attr({ "fill": (hide ? "#D4D4D4": serie.color) });
       serie.area.attr opacity: ((if hide then 0.25 else 0.75))  if serie.type is "area"
-      
-      #/serie.area.attr({ "opacity": 0.75 });
       if serie.type is "column"
         $.each serie.data, (k, data) ->
           data.graphic.attr opacity: ((if hide then 0.25 else 1))  if data.series
@@ -55,7 +50,6 @@ highData = (n, series, hide, name) ->
       ]
 
       i = 0
-
       while i < 4
         $("#display-data" + n + " #SeriesData" + i).html Ddata[i]
         i++
@@ -68,11 +62,7 @@ highData = (n, series, hide, name) ->
     $("#display-data" + n + " #SeriesName").empty()
   return
 clickItem = (chartSeries, series, $legendItem, options, vCls) ->
-  #alert(va)
-  #alert(options)
-
   chartSeries.forEach (seri) ->
-
     seri.setVisible(false)
     if seri.name is series.name
       seri.setVisible()
@@ -81,18 +71,14 @@ clickItem = (chartSeries, series, $legendItem, options, vCls) ->
       return
 
     return
-  $('.'+vCls).css display: "block" 
-
-  #$legendItem.css options[(if series.visible then "itemHiddenStyle" else "itemStyle")]
-  #$legendItem.css color: series.color  if series.visible
+  $('.' + vCls).css display: "block"
   return
 
 ViewAllSeries = (chartSeries, vCls, va = null) ->
   $.each chartSeries, (i, seri) ->
-    #alert(seri.name)
-    seri.setVisible(true)  
-    return 
-  $('.'+vCls).css display: "none" 
+    seri.setVisible(true)
+    return
+  $('.' + vCls).css display: "none"
   return
 
 
@@ -101,14 +87,9 @@ callCommon = (chartIdArr) ->
 
   while i < chartIdArr.length
     parentElement = $(chartIdArr[i])[0]
-    
-    #alert(parentElement.children[0].id);
     finalEnergyId[i] = parentElement.children[0].id  if parentElement.children[0]
     $("#custom-legend" + i).remove()
     $("#display-data" + i).remove()
-    
-    # 5 Nov , Intern's code
-    # display data of series in container
     $xData = $("<div id=\"display-data" + i + "\">").css(
       width: "91%"
       marginLeft: 40
@@ -129,18 +110,19 @@ callCommon = (chartIdArr) ->
         fontWeight: "bold"
         fontSize: 10
       ).appendTo $xData
-      z++
 
-     $("<p id='SeriesName'></p>").css(
-       width: "100%"
-       float:"left"
-       fontWeight: "bold"
-       textAlign: "center"
-       lineHeight: "15px"
-      ).appendTo $xData
-    
+      z++;
+
+    $("<p id='SeriesName'></p>").css(
+      width: "100%"
+      float: "left"
+      fontWeight: "bold"
+      textAlign: "center"
+      lineHeight: "15px"
+    ).appendTo $xData
+
     # Create the legend box
-    $legend[i] = $("<div id=\"custom-legend" + i + "\" class=\"custom-legends\"><div class=\"view view"+i+"\">View All</div>").css(
+    $legend[i] = $("<div id=\"custom-legend" + i + "\" class=\"custom-legends\"><div class=\"view view" + i + "\">View All</div>").css(
       minWidth: "120px"
       borderRadius: "5px"
       boxShadow: "0 0 0 1px #ddd"
@@ -154,19 +136,14 @@ callCommon = (chartIdArr) ->
       padding: "5px 5px 3px"
       position: "absolute",
       visibility: "hidden",
-      transition: "visibility 0s linear 0.5s,opacity 0.5s linear";
+      transition: "visibility 0s linear 0.5s,opacity 0.5s linear"
     ).appendTo($("#" + finalEnergyId[i]))
     i++
   return
 
-# .appendTo('#'+finalEnergyId[i]);
-
 callLegand = (options0, chartSeries, l_index, chart_name) ->
-  #alert(chart_name)
-  #chartSeries = chartSeries[l_index]
-  # create the legend item
-  $.each chartSeries, (i, series) -> 
-    if series.name is 'Total demand' or series.name is 'Total supply' or series.name is 'Total'         
+  $.each chartSeries, (i, series) ->
+    if series.name is 'Total demand' or series.name is 'Total supply' or series.name is 'Total'
       $legendItem = $("<div class=\"legend-item" + series.index + "\">").css(
         position: "relative"
         paddingTo: 5
@@ -174,7 +151,7 @@ callLegand = (options0, chartSeries, l_index, chart_name) ->
       ).css(options0[(if series.visible then "itemStyle" else "itemHiddenStyle")]).css(
         color: series.color
         font: "normal 7pt sans-serif"
-      ).html(series.name+'<div class="lin"></div>').appendTo($legend[l_index])
+      ).html(series.name + '<div class="lin"></div>').appendTo($legend[l_index])
     else
       $legendItem = $("<div class=\"legend-item" + series.index + "\">").css(
         position: "relative"
@@ -185,14 +162,11 @@ callLegand = (options0, chartSeries, l_index, chart_name) ->
         font: "normal 7pt sans-serif"
       ).html(series.name).appendTo($legend[l_index])
 
-    #click handler 
-
     $legendItem.click ->
-      vCls = 'view'+l_index
-      clickItem chartSeries, series, $legendItem, options0,vCls
-      return 
+      vCls = 'view' + l_index
+      clickItem chartSeries, series, $legendItem, options0, vCls
+      return
 
-    # legend mouseOver event
     $legendItem.hover (->
       $(this).css "fontWeight", "bold"
       highlight chartSeries, series.index, true
@@ -203,8 +177,7 @@ callLegand = (options0, chartSeries, l_index, chart_name) ->
       highlight chartSeries, series.index, false
       highData l_index, series, false
       return
-    return  
-
+    return
 
   return
 
@@ -212,8 +185,6 @@ finalEnergyId = []
 $legend = []
 
 # End legend mouseOver event  
-
-
 
 window.twentyfifty.highlightLegend = highlightLegend
 window.twentyfifty.highlight = highlight

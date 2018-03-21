@@ -10,7 +10,7 @@ class LandUse
 
   constructor: () ->
   
-  html = "<p style='position:relative;left: 595px;top: -215px;width: 140px;z-index: 1;'>India's Land Area <br> <b></b></p>"
+  html = "<p style='position:absolute;left: 730px;top: 120px;width: 140px;z-index: 1;'>India's Land Area <br> <b></b></p>"
 
   setup: () ->
     document.getElementById("results").style.width = "75%"

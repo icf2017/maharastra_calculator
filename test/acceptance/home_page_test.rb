@@ -18,71 +18,64 @@ describe "Home page" do
   it 'visits_all_energy' do
     visit "/"
     page.find('body .popover .popover-navigation').click_button('End tour')
-    click_on 'All Energy'
+    page.execute_script("twentyfifty.switchView('primary_energy_chart')")
     assert page.find('div#results').text.include?('Energy Demand')
   end
 
   it 'visits_electricity' do
     visit "/"
     page.find('body .popover .popover-navigation').click_button('End tour')
-    click_on 'Electricity'
+    page.execute_script("twentyfifty.switchView('electricity')")
     assert page.find('div#results').text.include?('Electricity demand')
   end
 
   it 'visits_energy_security' do
     visit "/"
     page.find('body .popover .popover-navigation').click_button('End tour')
-    click_on 'Energy Security'
+    page.execute_script("twentyfifty.switchView('energy_security')")
     assert page.find('div#results').text.include?('Percentage Import Dependence')
   end
 
   it 'visits_energy_emissions' do
     visit "/"
     page.find('body .popover .popover-navigation').click_button('End tour')
-    click_on 'Energy Emissions'
+    page.execute_script("twentyfifty.switchView('emissions')")
     assert page.find('div#results').text.include?('Total Emissions')
   end
 
   it 'visits_energy_flows' do
     visit "/"
     page.find('body .popover .popover-navigation').click_button('End tour')
-    click_on 'Energy Flows'
+    page.execute_script("twentyfifty.switchView('sankey')")
     assert page.find('div#results').text.include?('Flows in the Indian Energy System')
   end
 
   it 'visits_land_requirements' do
     visit "/"
     page.find('body .popover .popover-navigation').click_button('End tour')
-    click_on 'Land Requirement'
+    page.execute_script("twentyfifty.switchView('map')")
     assert page.find('div#results').text.include?('Land Footprint')
   end
 
   it 'visits_grid_balancing' do
     visit "/"
     page.find('body .popover .popover-navigation').click_button('End tour')
-    click_on 'Grid Balancing'
+    page.execute_script("twentyfifty.switchView('grid_balancing_summer')")
     assert page.find('div#results').text.include?('Grid dispatch pattern')
   end
 
   it 'visits_energy_cost' do
     visit "/"
     page.find('body .popover .popover-navigation').click_button('End tour')
-    click_on 'Energy Costs'
+    page.execute_script("twentyfifty.switchView('total_cost')")
     assert page.find('div#results').text.include?('energy system costs')
   end
 
   it 'visits_my_story' do
     visit "/"
     page.find('body .popover .popover-navigation').click_button('End tour')
-    click_on 'My Story'
+    page.execute_script("twentyfifty.switchView('my_story')")
     assert page.find('div#results').text.include?('The chosen energy pathway')
-  end
-
-  it 'visits_assumptions' do
-    visit "/"
-    page.find('body .popover .popover-navigation').click_button('End tour')
-    click_on 'Assumptions'
-    assert page.find('div#results').text.include?('Assumptions')
   end
 
 end

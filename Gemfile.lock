@@ -55,6 +55,8 @@ GEM
     i18n (1.0.0)
       concurrent-ruby (~> 1.0)
     json (2.1.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
@@ -129,6 +131,7 @@ DEPENDENCIES
   ffi
   haml
   json
+  launchy
   minitest
   puma (= 3.11.3)
   rack-test
