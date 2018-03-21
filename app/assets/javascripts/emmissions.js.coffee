@@ -56,7 +56,7 @@ class Emissions
     $('#warning').empty()
     $('#display').empty()
  
-    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='selected' onclick=''>Total and Per Capita Emissions</a></li><li style='display:none'><a href='#' id='energy-subnav-2' class='' onclick=''>Emissions 2</a></li><li style='display:none'><a href='#' id='energy-subnav-3' class='' onclick=''>Emissions 3</a></li></ul>")
+    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='btn btn-default selected' onclick=''>Total and Per Capita Emissions</a></li></ul>")
 
     @total_emissions_chart = new Highcharts.Chart({
       chart: { renderTo: 'total_emissions_chart', height: 250, width: 300 },
