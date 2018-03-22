@@ -1,19 +1,21 @@
 shareHTML = """
   <div id='assumption'> 
-    <h1>Assumptions</h1>
-    <table style='width:100%' id='g_assump' cellpadding='8' border=1>
-      <tr class='tr_cls'>
-        <th>Year</th>
-        <th>Units</th>
-        <th>2012</th>
-        <th>2017</th>
-        <th>2022</th>
-        <th>2027</th>
-        <th>2032</th>
-        <th>2037</th>
-        <th>2042</th>
-        <th>2047</th>
-      </tr>
+    <h4>Assumptions</h4>
+    <table class='table table-striped' id='g_assump' cellpadding='8' border=1>
+      <thead class='thead-dark'>
+        <tr>
+          <th>Year</th>
+          <th>Units</th>
+          <th>2012</th>
+          <th>2017</th>
+          <th>2022</th>
+          <th>2027</th>
+          <th>2032</th>
+          <th>2037</th>
+          <th>2042</th>
+          <th>2047</th>
+        </tr>
+      </thead>
     </table>
   </div>
 """
@@ -52,12 +54,7 @@ class Assumptions
 
     j = 1
     while j < 10
-      if(j%2 == 0)
-        cls = ''
-      else
-        cls = 'tr_cls'
-
-      $('#g_assump').append('<tr class='+cls+'><td style="font-weight: bold;">'+@pathway['global_assumption'][j][0]+'</td><td>'+@pathway['global_assumption'][j][1]+'</td><td>'+(@pathway['global_assumption'][j][2])+'</td><td>'+(@pathway['global_assumption'][j][3])+'</td><td>'+(@pathway['global_assumption'][j][4])+'</td><td>'+(@pathway['global_assumption'][j][5])+'</td><td>'+(@pathway['global_assumption'][j][6])+'</td><td>'+(@pathway['global_assumption'][j][7])+'</td><td>'+(@pathway['global_assumption'][j][8])+'</td><td>'+(@pathway['global_assumption'][j][9])+'</td></tr>')
+      $('#g_assump').append('<tr><td style="font-weight: bold;">'+@pathway['global_assumption'][j][0]+'</td><td>'+@pathway['global_assumption'][j][1]+'</td><td>'+(@pathway['global_assumption'][j][2])+'</td><td>'+(@pathway['global_assumption'][j][3])+'</td><td>'+(@pathway['global_assumption'][j][4])+'</td><td>'+(@pathway['global_assumption'][j][5])+'</td><td>'+(@pathway['global_assumption'][j][6])+'</td><td>'+(@pathway['global_assumption'][j][7])+'</td><td>'+(@pathway['global_assumption'][j][8])+'</td><td>'+(@pathway['global_assumption'][j][9])+'</td></tr>')
       j++
     
 

@@ -271,9 +271,12 @@
       #viewStory
 
     .footer
+      .blue-bar
+        %span Designed & Developed by Energy Department, Government of Karnataka
       .container
         .row
-          .col-md-6
+          .col-md-4
+            %h6 HELP
             %ul
               %li
                 %a#TourLink{ :href => '#'}
@@ -281,6 +284,9 @@
               %li
                 %a{href:'http://indiaenergy.gov.in/how-it-works.php', target:'_new', onclick:'return sitevisit();' }
                   Help
+          .col-md-4
+            %h6 SHARE
+            %ul
               %li
                 #share-twitter
                   %a{href:"#", onclick:'tweetCurrentPage()'}
@@ -291,6 +297,7 @@
                   %a{href:"https://facebook.com/sharer/sharer.php?u=localhost:9292/pathways/22222222222222222222222222212222222222222211222222222222222/primary_energy_chart", onclick:'', target:'_new'}
                     %i.fa.fa-facebook
                     %span Share on Facebook
-          .col-md-6
+          .col-md-4
+            %h6 RESOURCES
             Based on <a href='http://indiaenergy.gov.in/docs/India_Energy_Security_Scenarios_2047_Ver2.0.xlsx'>excel #{ModelStructure.instance.reported_calculator_version.to_s.downcase}</a>. </br> The source code for this site is available under an open source licence from
             %a{href: "https://github.com/iept/iess_v2", target:'_new', onclick:'return sitevisit();'}Github share link
