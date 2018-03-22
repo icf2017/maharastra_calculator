@@ -1,8 +1,9 @@
 class Electricity
 
   setup: () ->
+    document.getElementById("display_table").style.width = "12%"
     document.getElementById("results").style.width = "75%"
-    document.getElementById("warning").style.width = "13%"
+    document.getElementById("warning").style.width = "10%"
     target = $('#results')
     target.append("<div id='demand_chart' class='chart'></div>")
       .append("<div id='supply_chart' class='chart'></div>")

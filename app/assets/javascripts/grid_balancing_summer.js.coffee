@@ -4,6 +4,7 @@ class GridBalancingSummer
     @ready = false
   
   setup: () ->
+    document.getElementById("display_table").style.width = "10%"
     document.getElementById("results").style.width = "75%"
     document.getElementById("warning").style.width = "13%"
     $('#energy_container').empty()
