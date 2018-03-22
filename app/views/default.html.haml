@@ -21,9 +21,9 @@
   %body
     %nav.navbar.navbar-expand-lg.navbar-light.bg-light
       .container
-        %a.navbar-brand{href: "http://indiaenergy.gov.in", target:'_new', onclick:'return sitevisit();'}
-          %img.d-inline-block{:alt => "", :height => "30px", src: "../../assets/images/logo-GovKarnataka.png", :width => "30px"}
-          %span Government of Karnataka
+        %a.navbar-brand{href: "#"}
+          %img.d-inline-block{:alt => "", :height => "50px", src: "../../assets/images/logo-GovKarnataka.png", :width => "50px"}
+          %img.d-inline-block{:alt => "", :height => "50px", src: "../../assets/images/niti-aayog-logo.png", :width => "50px"}
         %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
           %span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
@@ -96,12 +96,6 @@
                 - [40,41].each do |choice|
                   = classic_table_row_for_choice structure.choices[choice]
                 <tr height='10'><td></td></tr>
-
-              - choiceArr = [42]
-              = classic_table_row_for_heading 'Telecom',6, choiceArr, false
-              %table#collapseme6.collapse.out
-                - [42].each do |choice|
-                  = classic_table_row_for_choice structure.choices[choice]
 
           #supply.tour_4
             <h2>Supply - Renewable and Clean Energy</h2>
@@ -279,11 +273,20 @@
             %h6 HELP
             %ul
               %li
+                %a{href: 'http://google.com', target:'_new'}
+                  Introduction to GSEC 2050
+              %li
+                %a{href: 'http://google.com', target:'_new'}
+                  How to use this tool
+              %li
                 %a#TourLink{ :href => '#'}
-                  New User?
+                  Take a tour?
               %li
                 %a{href:'http://indiaenergy.gov.in/how-it-works.php', target:'_new', onclick:'return sitevisit();' }
                   Help
+              %li
+                %a{href:'http://google.com', target:'_new', onclick:'return sitevisit();' }
+                  Submit Feedback
           .col-md-4
             %h6 SHARE
             %ul

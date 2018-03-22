@@ -93,11 +93,11 @@ module Helper
     {
       "primary_energy_chart" => "All Energy",
       "electricity" => "Electricity",
-      "energy_security" => "Energy Security",
+      # "energy_security" => "Energy Security",
       "emissions" => "Energy Emissions",
       "sankey" => "Energy Flows",
       "map" => "Land Requirement",
-      "grid_balancing_summer" => "Grid Balancing",
+      # "grid_balancing_summer" => "Grid Balancing",
       "total_cost" => "Energy Costs",
       "my_story" => "My Story",
       "assumptions" => "Assumptions",

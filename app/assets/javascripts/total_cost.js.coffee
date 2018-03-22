@@ -4,6 +4,7 @@ class TotalCost
     @ready = false
   
   setup: () ->
+    document.getElementById("display_table").style.width = "10%"
     document.getElementById("results").style.width = "65%"
     document.getElementById("warning").style.width = "22%"
     $('#energy_container').empty()
@@ -17,10 +18,8 @@ class TotalCost
     document.getElementById("print_div").style.display = "none"
     document.getElementById("warning").style.display = "block"
     $('#display').empty()
-    #$('#warning').empty()
- 
     $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='btn btn-dark selected' onclick='twentyfifty.switchView(\"total_cost\")'>Total Energy Cost</a></li><li><a href='#' id='energy-subnav-2' class='btn btn-dark' onclick='twentyfifty.switchView(\"costs\")'>Cost Overview</a></li><li><a href='#' id='energy-subnav-3' class='btn btn-dark' onclick='twentyfifty.switchView(\"costsYear\")'>Differential Cost</a></li></ul>")
-    
+
     #$('#warning').append("<h5>Warning</h5>")
 
     @chart_costs_context = new Highcharts.Chart(

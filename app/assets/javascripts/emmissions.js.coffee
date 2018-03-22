@@ -38,16 +38,13 @@ class Emissions
   constructor: () ->
 
   setup: () ->
-    document.getElementById("display_table").style.width = "13%"
-    document.getElementById("results").style.width = "70%"
+    document.getElementById("results").style.width = "80%"
     $('#energy_container').empty()
     $('#results').append("<div id='energy_container'></div>")
     target = $('#energy_container')
     target.append("<div id='total_emissions_chart' class='chart'></div>")
     target.append("<div id='total_percapita_emissions_chart' class='chart'></div>")
-    #target.append("<div id='emissions_chart_gdp' class='chart'></div>")
-    target.append("<div id='total_percapita_emissions_map' style='height:250px; background-image:url(../../assets/images/india4_trans.gif);background-size: 100% 100%; background-repeat: no-repeat;' class='chart'><p style='color: #fff;margin-left: -45px;margin-top: 100px;text-align: center;font-weight: bold;'></p></div>");
-    #target.append("<div id='emissions_chart' class='chart'></div>")
+    target.append("<div id='total_percapita_emissions_map' style='height:250px; background-image:url(../../assets/images/karnataka.png); background-repeat: no-repeat;' class='chart'><p style='color: #000000;margin-left: -45px;margin-top: 100px;text-align: center;font-weight: bold;'></p></div>");
 
     document.getElementById("pathway_box").style.display = "block"
     document.getElementById("classic_controls").style.display = "block"
@@ -56,8 +53,6 @@ class Emissions
     document.getElementById("warning").style.display = "none"
     $('#warning').empty()
     $('#display').empty()
-
-    $('#display').append("<h5>Explore</h5><ul class='subnav text-wrap'><li><a href='#' id='energy-subnav-1' class='btn btn-dark selected' onclick=''>Total & Per Capita Emissions</a></li></ul>")
 
     @total_emissions_chart = new Highcharts.Chart({
       chart: {renderTo: 'total_emissions_chart', height: 250, width: 300},

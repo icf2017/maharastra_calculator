@@ -1,7 +1,8 @@
 class ElectricityAnalysis
 
   setup: () ->
-    document.getElementById("results").style.width = "75%"
+    document.getElementById("display_table").style.width = "15%"
+    document.getElementById("results").style.width = "70%"
     document.getElementById("warning").style.width = "13%"
     target = $('#results')
     target.append("<div id='demand_analysis' class='chart'></div>")
