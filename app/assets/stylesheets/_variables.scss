@@ -1,3 +1,5 @@
+$white: #FFFFFF;
+$blue: #2196f3;
 $color-black: #0E0E0E;
 $color-black-light: #575757;
 
@@ -13,3 +15,10 @@ $container-max-widths: (
         lg: 960px,
         xl: 1200px
 ) !default;
+
+// Theme
+$primary:       $blue !default;
+
+// Breadcrumbs
+$breadcrumb-bg: $primary;
+$breadcrumb-divider-color: $white;
