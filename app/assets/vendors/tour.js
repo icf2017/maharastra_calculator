@@ -24,6 +24,24 @@ $(window).load(function () {
       animation: true
     },
     {
+      element: "ul.help",
+      placement: "top",
+      backdrop: true,
+      title: "Need some help?",
+      content: "Click on ‘Help’ to know more about how to use the webtool and some more of its interesting features.<br/> You can also submit feedback & explore the technical white papers",
+      backdropPadding: 10,
+      animation: true
+    },
+    {
+      element: "ul.share",
+      placement: "top",
+      backdrop: true,
+      title: "Share with friends",
+      content: "You can share the pathway that you have created on your social media accounts by clicking on the Facebook and Twitter icons.",
+      backdropPadding: 10,
+      animation: true
+    },
+    {
       element: "#classic_controls",
       placement: "top",
       backdrop: true,
@@ -110,15 +128,6 @@ $(window).load(function () {
       backdrop: true,
       title: "Choose an example scenario",
       content: "Choose from several pre-programmed example pathways to witness their implications.",
-      backdropPadding: 10,
-      animation: true
-    },
-    {
-      element: ".menu_1",
-      placement: "bottom",
-      backdrop: true,
-      title: "Need some more help?",
-      content: "Click on ‘Help’ to know more about how to use the webtool and some more of its interesting features.<br/>You can share the pathway that you have created on your social media accounts by clicking on the Facebook and Twitter icons.",
       backdropPadding: 10,
       animation: true
     },
