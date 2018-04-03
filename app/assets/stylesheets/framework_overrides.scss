@@ -17,3 +17,8 @@ div#total_percapita_emissions_map {
   background-color: transparent !important;
   background-position: 39% 43%;
 }
+
+a.nav-link.active {
+  background-color: darken($white, 10%);
+  border-radius: 15px;
+}

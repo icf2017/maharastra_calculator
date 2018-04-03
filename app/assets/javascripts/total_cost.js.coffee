@@ -112,9 +112,13 @@ class TotalCost
     $('#energy_container').empty()
 
     @chart_costs_context = null
-  
+
+  updateNavBar: () ->
+    $('li.nav-item a.active').removeClass('active')
+    $('li.nav-item:nth-child(6) a').addClass('active')
+
   updateResults: (@pathway) ->
- 
+    @updateNavBar()
     @setup() unless @chart_costs_context
 
     titles = ["counterfact_low","counterfact_high"]

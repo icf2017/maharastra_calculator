@@ -214,18 +214,13 @@ class Emissions
     #@emissions_chart_gdp = null
     @total_percapita_emissions_chart = null
 
-  updateResults: (@pathway) ->
-    @setup() unless @emissions_chart_gdp? && @total_emissions_chart? && @total_percapita_emissions_chart?
+  updateNavBar: () ->
+    $('li.nav-item a.active').removeClass('active')
+    $('li.nav-item:nth-child(3) a').addClass('active')
 
-    your_pathway = []
-    do_nothing = []
-    #for title in titles_emissions
-    #  if(@pathway['emissions_do_nothing'][title][0]<0)
-    #    your_pathway.push(-(@pathway['emissions_do_nothing'][title][2]/@pathway['emissions_do_nothing'][title][0]))
-    #    do_nothing.push(-(@pathway['emissions_do_nothing'][title][1]/@pathway['emissions_do_nothing'][title][0]))
-    #  else
-    #    your_pathway.push((@pathway['emissions_do_nothing'][title][2]/@pathway['emissions_do_nothing'][title][0]))
-    #    do_nothing.push((@pathway['emissions_do_nothing'][title][1]/@pathway['emissions_do_nothing'][title][0]))
+  updateResults: (@pathway) ->
+    @updateNavBar()
+    @setup() unless @emissions_chart_gdp? && @total_emissions_chart? && @total_percapita_emissions_chart?
 
     i = 0
 
@@ -343,17 +338,13 @@ class Emissions
     i = 0
     $('.view0').click ->
       twentyfifty.ViewAllSeries ChartArr[0], "view0", "viewAll"
-
       return
 
     $('.view1').click ->
       twentyfifty.ViewAllSeries ChartArr[1], "view1", "viewAll"
-
       return
 
-
     ######### End View  All click function ######################
-
 
     $("#" + charts_id[0]).mouseover ->
       $("#custom-legend0").css visibility: "visible"

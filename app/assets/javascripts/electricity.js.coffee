@@ -16,19 +16,19 @@ class Electricity
     document.getElementById("warning").style.display = "block"
 
     $('#display').empty()
- 
+
     $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='btn btn-dark selected' onclick='twentyfifty.switchView(\"electricity\")'>Demand and Supply</a></li><li><a href='#' id='energy-subnav-2' class='btn btn-dark' onclick='twentyfifty.switchView(\"electricity_analysis\")'>Analysis of Electricity Share</a></li></ul>")
 
-   
+
     document.getElementById("results").style.overflow = "inherit"
-   
+
     @demand_chart = new Highcharts.Chart({
-      chart: { renderTo: 'demand_chart', height: 250, width: 300 },
-      title: { text: 'Electricity demand' },
-      tooltip:{
+      chart: {renderTo: 'demand_chart', height: 250, width: 300},
+      title: {text: 'Electricity demand'},
+      tooltip: {
         enabled: true,
         formatter: () ->
-          "<b>#{this.series.name}</b><br/><b>#{this.x}: #{Highcharts.numberFormat(this.y,0)} TWh/yr </b>"
+          "<b>#{this.series.name}</b><br/><b>#{this.x}: #{Highcharts.numberFormat(this.y, 0)} TWh/yr </b>"
         style:
           fontSize: "9px"
           padding: "8px"
@@ -36,9 +36,10 @@ class Electricity
           x: 65
           y: 0
       },
-      yAxis: { 
-        labels: formatter: ->
-          return this.value/1000 + 'k'
+      yAxis: {
+        labels:
+          formatter: ->
+            return this.value / 1000 + 'k'
         title: {
           style: {
             fontWeight: "bold",
@@ -51,14 +52,14 @@ class Electricity
           x: 0,
           y: -10,
           text: "TWh/yr"
-        }, 
-        min: 0, 
-        max: 7500,
-        width: 225 
         },
-      xAxis:{ width: 240},
-      legend:{
-        itemStyle: { fontSize: '7pt' }
+        min: 0,
+        max: 7500,
+        width: 225
+      },
+      xAxis: {width: 240},
+      legend: {
+        itemStyle: {fontSize: '7pt'}
       },
       plotOptions:
         area:
@@ -104,12 +105,12 @@ class Electricity
     })
 
     @supply_chart = new Highcharts.Chart({
-      chart: { renderTo: 'supply_chart', height: 250, width: 300 },
-      title: { text: 'Electricity supply' },
-      tooltip:{
+      chart: {renderTo: 'supply_chart', height: 250, width: 300},
+      title: {text: 'Electricity supply'},
+      tooltip: {
         enabled: true,
         formatter: () ->
-          "<b>#{this.series.name}</b><br/><b>#{this.x}: #{Highcharts.numberFormat(this.y,0)} TWh/yr </b>"
+          "<b>#{this.series.name}</b><br/><b>#{this.x}: #{Highcharts.numberFormat(this.y, 0)} TWh/yr </b>"
         style:
           fontSize: "9px"
           padding: "8px"
@@ -117,9 +118,10 @@ class Electricity
           x: 65
           y: 0
       },
-      yAxis: { 
-        labels: formatter: ->
-          return this.value/1000 + 'k'
+      yAxis: {
+        labels:
+          formatter: ->
+            return this.value / 1000 + 'k'
         title: {
           style: {
             fontWeight: "bold",
@@ -132,14 +134,14 @@ class Electricity
           x: 0,
           y: -10,
           text: "TWh/yr"
-        }, 
-        min: 0, 
-        max: 20000,
-        width: 225 
         },
-      xAxis:{ width: 240},
-      legend:{
-        itemStyle: { fontSize: '7pt' }
+        min: 0,
+        max: 20000,
+        width: 225
+      },
+      xAxis: {width: 240},
+      legend: {
+        itemStyle: {fontSize: '7pt'}
       },
       plotOptions:
         area:
@@ -185,12 +187,12 @@ class Electricity
     })
 
     @electricity_overgeneration = new Highcharts.Chart({
-      chart: { renderTo: 'electricity_overgeneration', height: 250, width: 300 , type: 'line' },
-      title: { text: 'Over-generation / Exports' },
-      tooltip:{
+      chart: {renderTo: 'electricity_overgeneration', height: 250, width: 300, type: 'line'},
+      title: {text: 'Over-generation / Exports'},
+      tooltip: {
         enabled: true,
         formatter: () ->
-          "<b>#{this.series.name}</b><br/><b>#{this.x}: #{Highcharts.numberFormat(this.y,0)} TWh/yr </b>"
+          "<b>#{this.series.name}</b><br/><b>#{this.x}: #{Highcharts.numberFormat(this.y, 0)} TWh/yr </b>"
         style:
           fontSize: "9px"
           padding: "8px"
@@ -198,9 +200,10 @@ class Electricity
           x: 65
           y: 0
       },
-      yAxis: { 
-        labels: formatter: ->
-          return this.value/1 + ''
+      yAxis: {
+        labels:
+          formatter: ->
+            return this.value / 1 + ''
         title: {
           style: {
             fontWeight: "bold",
@@ -213,11 +216,12 @@ class Electricity
           x: 0,
           y: -10,
           text: "TWh/yr"
-        },  
-        reversed: false, },
-      xAxis:{ width: 240},
-      legend:{
-        itemStyle: { fontSize: '7pt' }
+        },
+        reversed: false,
+      },
+      xAxis: {width: 240},
+      legend: {
+        itemStyle: {fontSize: '7pt'}
       },
       plotOptions:
         area:
@@ -263,57 +267,82 @@ class Electricity
 
 
   teardown: () ->
-
     $('#results').empty()
     @demand_chart = null
     @supply_chart = null
     @electricity_overgeneration = null
 
 
+  updateNavBar: () ->
+    $('li.nav-item a.active').removeClass('active')
+    $('li.nav-item:nth-child(2) a').addClass('active')
+
+
   updateResults: (@pathway) ->
-    @setup() unless @demand_chart? && @supply_chart?  && @electricity_overgeneration?
+    @updateNavBar()
+    @setup() unless @demand_chart? && @supply_chart? && @electricity_overgeneration?
 
 
-      
     # Demand for electricity
-    titles = ['Transport','Industry','Cooking','Buildings','Telecom','Pumps& Tractors']
+    titles = ['Transport', 'Industry', 'Cooking', 'Buildings', 'Telecom', 'Pumps& Tractors']
     i = 0
 
     data = @pathway['electricity']['demand']['Total']
     if @demand_chart.series[i]?
-      @demand_chart.series[i].setData(data,false)
+      @demand_chart.series[i].setData(data, false)
     else
-      @demand_chart.addSeries({type: 'line', name: 'Total demand',data:data, lineColor: '#000', color: '#000',lineWidth:2,dashStyle:'Dot', shadow: false},false)
+      @demand_chart.addSeries({
+        type: 'line',
+        name: 'Total demand',
+        data: data,
+        lineColor: '#000',
+        color: '#000',
+        lineWidth: 2,
+        dashStyle: 'Dot',
+        shadow: false
+      }, false)
     i++
 
     for name in titles
       data = @pathway['electricity']['demand'][name]
       if @demand_chart.series[i]?
-        @demand_chart.series[i].setData(data,false)
+        @demand_chart.series[i].setData(data, false)
       else
-        @demand_chart.addSeries({name:name,data:data},false)
+        @demand_chart.addSeries({name: name, data: data}, false)
       i++
 
 
-    titles = ["Gas Power Stations","Coal power stations","Carbon Capture Storage (CCS)","Electricity Balancing Requirement","Fossil Fuel Based Electricity","Hydro and Nuclear","Renewable Based Electricity","Electricity imports"]
+    titles = ["Gas Power Stations", "Coal power stations", "Carbon Capture Storage (CCS)",
+      "Electricity Balancing Requirement", "Fossil Fuel Based Electricity", "Hydro and Nuclear",
+      "Renewable Based Electricity", "Electricity imports"]
 
-    titles_supply = ["Gas Power Stations","Coal power stations","CCS","Electricity for Balancing","Fossil Fuel","Hydro and Nuclear","Renewable","Electricity imports"]
+    titles_supply = ["Gas Power Stations", "Coal power stations", "CCS", "Electricity for Balancing", "Fossil Fuel",
+      "Hydro and Nuclear", "Renewable", "Electricity imports"]
 
     i = 0
 
     data = @pathway['electricity']['supply']['Total generation supplied to grid']
     if @supply_chart.series[i]?
-      @supply_chart.series[i].setData(data,false)
+      @supply_chart.series[i].setData(data, false)
     else
-      @supply_chart.addSeries({type: 'line', name: 'Total supply',data:data, lineColor: '#000', color: '#000',lineWidth:2,dashStyle:'Dot', shadow: false},false)
+      @supply_chart.addSeries({
+        type: 'line',
+        name: 'Total supply',
+        data: data,
+        lineColor: '#000',
+        color: '#000',
+        lineWidth: 2,
+        dashStyle: 'Dot',
+        shadow: false
+      }, false)
     i++
 
     for name in titles
       data = @pathway['electricity']['supply'][name]
       if @supply_chart.series[i]?
-        @supply_chart.series[i].setData(data,false)
+        @supply_chart.series[i].setData(data, false)
       else
-        @supply_chart.addSeries({name:titles_supply[i-1],data:data},false)
+        @supply_chart.addSeries({name: titles_supply[i - 1], data: data}, false)
       i++
 
 
@@ -330,11 +359,9 @@ class Electricity
       )
 
       if @electricity_overgeneration.series[i]?
-        @electricity_overgeneration.series[i].setData(data,false)
-        #series.push(-@pathway['electricity']['overgeneration'][name])
+        @electricity_overgeneration.series[i].setData(data, false)
       else
-        @electricity_overgeneration.addSeries({name:name,data:data},false)
-        #series.push(-@pathway['electricity']['overgeneration'][name])
+        @electricity_overgeneration.addSeries({name: name, data: data}, false)
       i++
 
     # **************** Start Custom Legand *****************     
@@ -381,47 +408,44 @@ class Electricity
 
       L++
 
-####### .view is a class of 'View All' item in legand list. #######
+    ####### .view is a class of 'View All' item in legand list. #######
     i = 0
     $('.view0').click ->
-
       twentyfifty.ViewAllSeries ChartArr[0], "view0", "viewAll"
 
       return
 
     $('.view1').click ->
-
       twentyfifty.ViewAllSeries ChartArr[1], "view1", "viewAll"
 
       return
 
     $('.view2').click ->
-
       twentyfifty.ViewAllSeries ChartArr[2], "view2", "viewAll"
 
       return
 
-######### End View  All click function ######################
+    ######### End View  All click function ######################
 
 
-    $("#"+charts_id[0]).mouseover ->
+    $("#" + charts_id[0]).mouseover ->
       $("#custom-legend0").css visibility: "visible"
       $("#custom-legend0").css opacity: "0.9"
-    $("#"+charts_id[0]).mouseout ->
+    $("#" + charts_id[0]).mouseout ->
       $("#custom-legend0").css visibility: "hidden"
       $("#custom-legend0").css opacity: 0
 
-    $("#"+charts_id[1]).mouseover ->
+    $("#" + charts_id[1]).mouseover ->
       $("#custom-legend1").css visibility: "visible"
       $("#custom-legend1").css opacity: "0.9"
-    $("#"+charts_id[1]).mouseout ->
+    $("#" + charts_id[1]).mouseout ->
       $("#custom-legend1").css visibility: "hidden"
       $("#custom-legend1").css opacity: 0
-    
-    $("#"+charts_id[2]).mouseover ->
+
+    $("#" + charts_id[2]).mouseover ->
       $("#custom-legend2").css visibility: "visible"
       $("#custom-legend2").css opacity: "0.9"
-    $("#"+charts_id[2]).mouseout ->
+    $("#" + charts_id[2]).mouseout ->
       $("#custom-legend2").css visibility: "hidden"
       $("#custom-legend2").css opacity: 0
 
@@ -431,6 +455,6 @@ class Electricity
     @supply_chart.redraw()
     @electricity_overgeneration.redraw()
 
-    document.getElementById("warning").innerHTML="<p>This scenario is over generating <b>"+@pathway['electricity']['overgeneration']['Overgeneration'][7]+" TWh </b> of electricity in 2047. You may want to dial back your supply options for minimizing this value</p>"
-    
+    document.getElementById("warning").innerHTML = "<p>This scenario is over generating <b>" + @pathway['electricity']['overgeneration']['Overgeneration'][7] + " TWh </b> of electricity in 2047. You may want to dial back your supply options for minimizing this value</p>"
+
 window.twentyfifty.views['electricity'] = new Electricity

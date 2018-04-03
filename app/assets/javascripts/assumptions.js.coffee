@@ -44,11 +44,14 @@ class Assumptions
     $('#print_div').empty()
 
     @assumption = false
-  
+
+  updateNavBar: () ->
+    $('li.nav-item a.active').removeClass('active')
+    $('li.nav-item:nth-child(8) a').addClass('active')
+
   updateResults: (@pathway) ->
+    @updateNavBar()
     @setup() unless @assumption
-
-
 
     $('#g_assump').append('<tr class=""><td style="font-weight: bold;">'+@pathway['global_assumption'][0][0]+'</td><td>'+@pathway['global_assumption'][0][1]+'</td><td>'+(@pathway['global_assumption'][0][2]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][3]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][4]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][5]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][6]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][7]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][8]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][9]).toFixed(2)+'</td></tr>')
 

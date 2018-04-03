@@ -29,8 +29,13 @@ class SankeyDisplay
          </div>
          </div>
          """
- 
+
+  updateNavBar: () ->
+    $('li.nav-item a.active').removeClass('active')
+    $('li.nav-item:nth-child(4) a').addClass('active')
+
   updateResults: (pathway) ->
+    @updateNavBar()
     @setup() unless @s?
 
     #curyear is the variable that holds the current year. Defaults to 2047 unless explicitly changed elsewhere.

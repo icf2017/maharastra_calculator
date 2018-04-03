@@ -154,7 +154,12 @@ class LandUse
     @land_chart = null
     @land_map = null
 
+  updateNavBar: () ->
+    $('li.nav-item a.active').removeClass('active')
+    $('li.nav-item:nth-child(5) a').addClass('active')
+
   updateResults: (@pathway) ->
+    @updateNavBar()
     @setup() unless @land_chart? && @land_map?
 
     $('#results p b').html((@pathway['land_do_nothing']["India's Land Area"][1]).toFixed(0) + ' M ha')

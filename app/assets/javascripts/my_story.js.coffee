@@ -79,8 +79,13 @@ class MyStory
     $('#print_div').empty()
     $('#Mystory').empty()
     @ready = false
-  
+
+  updateNavBar: () ->
+    $('li.nav-item a.active').removeClass('active')
+    $('li.nav-item:nth-child(7) a').addClass('active')
+
   updateResults: (@pathway) ->
+    @updateNavBar()
     @setup() unless @ready
     $('#Mystory p').html(@pathway['my_story'][0][0])
 
