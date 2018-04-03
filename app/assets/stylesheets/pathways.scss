@@ -74,20 +74,19 @@ body {
 div.warning_option {
   width: 13%;
   float: right;
-  margin: 0 1%;
   display: none;
-  border: 2px solid #154c85;
 
   h6 {
     color: #910000;
     float: left;
     margin: 0 0 5px;
-    padding: 0;
+    padding: 5px;
     text-align: center;
     width: 100%;
   }
   p {
-
+    border: 2px solid #154c85;
+    margin: 0 1%;
     padding: 5px;
     margin-bottom: 0;
   }

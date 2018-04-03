@@ -32,27 +32,31 @@
               %li.nav-item
                 %a.nav-link{href:'#', onclick:"twentyfifty.switchView('#{action}')"}= title
     .container
-      %ol.breadcrumb
-        %li.breadcrumb-item All Energy
-        %li.breadcrumb-item Default Pathway
+      .col-md-12
+        .row
+          %ol.breadcrumb
+            %li.breadcrumb-item All Energy
+            %li.breadcrumb-item Default Pathway
 
-      #display_table
-        #display.diaplay_nav
-      #results
-      #print_div
+      .col-md-12
+        .row
+          #display_table
+            #display.diaplay_nav
+          #results
+          #print_div
+          #warning.warning_option
+            %h5 Warning
 
-      #warning.warning_option
-        %h5 Warning
-
-      #pathway_box
-        Create your own pathway by selecting effort levels 1 to 4 for each sector or choose an example pathway.
-        %select{:onchange => "if(this.value == 0 ) return false; else twentyfifty.switchPathway(this.value);"}
-          %option{:value => 0}= "Choose from Example Scenarios"
-          - saved_pathways.each do |name,code|
-            %option{:value => code}= name
-
-      #classic_controls.row
-        .col-md-12
+      .col-md-12
+        .row
+          #pathway_box
+            Create your own pathway by selecting effort levels 1 to 4 for each sector or choose an example pathway.
+            %select{:onchange => "if(this.value == 0 ) return false; else twentyfifty.switchPathway(this.value);"}
+              %option{:value => 0}= "Choose from Example Scenarios"
+              - saved_pathways.each do |name,code|
+                %option{:value => code}= name
+      .col-md-12
+        #classic_controls.row
           #demand.tour_3
             <h2 data-step="1" data-intro="This is a tooltip!">Demand</h2>
             %table
@@ -259,13 +263,11 @@
                 - [45].each do |choice|
                   = classic_table_row_for_choice structure.choices[choice]
                 <tr height='10'><td></td></tr>
+        .clearfix
       #tooltip
       .clearfix
-
-      #viewStory
-
     .footer
-      .blue-bar
+      .black-bar
         %span Designed & Developed by Energy Department, Government of Karnataka
       .container
         .row
@@ -274,13 +276,13 @@
             %ul.help
               %li
                 %a{href: 'http://google.com', target:'_new'}
-                  Introduction to GSEC 2050
+                  Introduction to KSEC 2050
               %li
                 %a{href: 'http://google.com', target:'_new'}
-                  How to use this tool
+                  How to use this tool?
               %li
                 %a#TourLink{ :href => '#'}
-                  Take a tour?
+                  Take a tour
               %li
                 %a{href:'http://indiaenergy.gov.in/how-it-works.php', target:'_new', onclick:'return sitevisit();' }
                   Help
