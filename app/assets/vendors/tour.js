@@ -11,7 +11,7 @@ $(window).load(function () {
       orphan: true,
       placement: "top",
       backdrop: true,
-      title: "Welcome to India Energy Security Scenarios, 2047",
+      title: "Welcome to Karnataka State Energy Calculator 2050",
       content: "The IESS, 2047 is an energy scenario building tool, which aims to explore a range of potential future energy scenarios for India, for diverse energy demand and supply sectors, leading up to 2047.<br/> <br/> 21 Energy Demand and Supply sectors, and 50 levers that will impact our energy system are available to the user. Combination of the above choices offer hundreds of energy pathways till the year 2047.",
     },
     {
