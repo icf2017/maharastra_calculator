@@ -19,6 +19,10 @@ div#total_percapita_emissions_map {
 }
 
 a.nav-link.active {
-  background-color: darken($white, 10%);
+  background-color: darken($gray-200, 10%);
   border-radius: 15px;
+}
+
+.bg-grey {
+  background-color: $gray-200 !important;
 }
