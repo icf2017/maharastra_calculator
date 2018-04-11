@@ -5,8 +5,8 @@ class ElectricityAnalysis
     document.getElementById("results").style.width = "70%"
     document.getElementById("warning").style.width = "13%"
     target = $('#results')
-    target.append("<div id='demand_analysis' class='chart'></div>")
-      .append("<div id='supply_analysis' class='chart'></div>")
+    target.append("<div id='demand_analysis' class='all_energy_chart'></div>")
+      .append("<div id='supply_analysis' class='all_energy_chart'></div>")
 
     document.getElementById("pathway_box").style.display = "block"
     document.getElementById("classic_controls").style.display = "block"
