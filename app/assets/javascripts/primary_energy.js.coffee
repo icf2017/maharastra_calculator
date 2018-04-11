@@ -9,9 +9,8 @@ class PrimaryEnergy
     document.getElementById("warning").style.width = "13%"
     $('#results').append("<div id='energy_container'></div>")
     target = $('#energy_container')
-    target.append("<div id='demand_chart' class='chart'></div>")
-    target.append("<div id='supply_chart' class='chart'></div>")
-    target.append("<div id='dependency_chart' class='chart'></div>")
+    target.append("<div id='demand_chart' class='all_energy_chart'></div>")
+    target.append("<div id='supply_chart' class='all_energy_chart'></div>")
 
     document.getElementById("pathway_box").style.display = "block"
     document.getElementById("classic_controls").style.display = "block"
@@ -188,100 +187,6 @@ class PrimaryEnergy
       series: []
     })
 
-    @dependency_chart = new Highcharts.Chart({
-      chart: {
-        renderTo: 'dependency_chart',
-        type: 'line',
-        height: 250,
-        width: 300
-#events:
-#  load: () ->
-#    @renderer.text("80% reduction on 1990" ,60,170).css({color: '#fff',fill: '#fff', 'font-size': '0.75em'}).attr({zIndex:10}).add()
-
-      },
-      title: {text: 'Import Dependence'},
-      tooltip: {
-        enabled: true,
-        formatter: () ->
-          "<b>#{this.series.name}</b><br/><b>#{this.x}: #{Highcharts.numberFormat(this.y, 0)} % </b>"
-        style:
-          fontSize: "9px"
-          padding: "8px"
-        positioner: ->
-          x: 65
-          y: 0
-      },
-      yAxis: {
-        title: {
-          style: {
-            fontWeight: "bold",
-            color: "#154c85",
-            fontSize: "10px"
-          },
-          align: "high",
-          rotation: 0,
-          textAlign: "left",
-          x: 0,
-          y: -10,
-          text: "Percentage"
-        },
-        min: 0,
-        max: 100,
-        width: 225
-      },
-      xAxis: {
-        width: 240,
-        value: (148400),
-        dashStyle: 'longdashdot',
-
-      },
-      legend: {
-        itemStyle: {fontSize: '7pt'}
-      },
-      plotOptions:
-        area:
-          lineWidth: 0.1
-
-        series:
-          states:
-            hover:
-              enabled: true
-              lineWidth: 2
-              lineColor: "#6c6c6c"
-
-          events:
-            mouseOver: ->
-              twentyfifty.highlightLegend "custom-legend2", this.index, true
-              Ddata = [
-                Highcharts.numberFormat(@yData[0], 0, ",")
-                Highcharts.numberFormat(@yData[3], 0, ",")
-                Highcharts.numberFormat(@yData[5], 0, ",")
-                Highcharts.numberFormat(@yData[7], 0, ",")
-              ]
-              $("#display-data2 #SeriesName").html this.name
-
-              i = 0
-
-              while i < 4
-                $("#display-data2 #SeriesData" + i).html Ddata[i]
-                i++
-              return
-
-            mouseOut: ->
-              twentyfifty.highlightLegend "custom-legend2", this.index, false
-              i = 0
-
-              while i < 4
-                $("#display-data2 #SeriesData" + i).empty()
-                i++
-
-              $("#display-data2 #SeriesName").empty()
-              return
-
-      series: []
-
-    })
-
 
   teardown: () ->
     $('#results').empty()
@@ -296,7 +201,7 @@ class PrimaryEnergy
 
   updateResults: (@pathway) ->
     @updateNavBar()
-    @setup() unless @dependency_chart? && @final_energy_chart? && @primary_energy_chart?
+    @setup() unless @final_energy_chart? && @primary_energy_chart?
 
     titles_dependency = ['Coal',
       'Oil',
@@ -305,24 +210,6 @@ class PrimaryEnergy
     ]
 
     i = 0
-    for name in titles_dependency
-      data = @pathway['dependency'][name]
-
-      # data contains 0.1 for 10%, so multiply by 100 for charting
-      data = ((d * 100) for d in data)
-
-      if @dependency_chart.series[i]?
-        @dependency_chart.series[i].setData(data, false)
-      else
-        @dependency_chart.addSeries({name: name, data: data}, false)
-      i++
-
-    # The fourth in the series is the total, so we want to make it blacker, thicker and more dotted
-    # than the other lines
-    @dependency_chart.series[3].color = "#000000"
-    @dependency_chart.series[3].options.lineWidth = 3
-    @dependency_chart.series[3].options.dashStyle = "longdashdot"
-
 
     titles = ["Telecom", "Transport", "Industry", "Cooking", "Buildings", "Pumps& Tractors"]
     i = 0
@@ -428,18 +315,15 @@ class PrimaryEnergy
     ChartArr = [
       @final_energy_chart.series
       @primary_energy_chart.series
-      @dependency_chart.series
     ]
 
     optionsArr = [
       @final_energy_chart.options.legend
       @primary_energy_chart.options.legend
-      @dependency_chart.options.legend
     ]
     chartIdArr = [
       "#demand_chart"
       "#supply_chart"
-      "#dependency_chart"
     ]
 
     ##### calling common layout of legand
@@ -454,7 +338,7 @@ class PrimaryEnergy
     L = 0
     K = 0
     charts_id = []
-    while L < 3
+    while L < 2
       chartSeries = []
       chartSeries = ChartArr[L]
       options = optionsArr[L]
@@ -516,7 +400,6 @@ class PrimaryEnergy
 
     ########## **************** End Custom Legand ***************** #############    
 
-    @dependency_chart.redraw()
     @final_energy_chart.redraw()
     @primary_energy_chart.redraw()
 

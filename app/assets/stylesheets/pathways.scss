@@ -20,19 +20,21 @@ body {
   margin: 0;
   overflow: inherit;
   width: 75%;
-  //z-index: -1;
-  //background-color: #e1e1e1;
   min-height: 285px;
 }
 
 .chart {
   padding: 0;
   border: 0;
-  /*margin: 0 0 5px 0;*/
   width: 33.3%;
-  /*height: 275px;*/
   float: left;
-  //z-index: -1;
+}
+
+.all_energy_chart {
+  padding: 0;
+  border: 0;
+  width: 45%;
+  float: left;
 }
 
 #display_table {
