@@ -28,7 +28,7 @@ class PrimaryEnergyDetail
       title: { text: 'Energy Demand' },
       yAxis: {
         labels: formatter: ->
-          return Math.round(this.value/1000) + 'k'
+          return Math.round(this.value)
 
         title: {
           style: {
