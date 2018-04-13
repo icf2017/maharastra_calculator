@@ -47,9 +47,9 @@ class PrimaryEnergy
           text: "TWh/yr"
         },
         min: 0,
-        max: 24000
+        max: 1000
       },
-      xAxis: {width: 240},
+      xAxis: {width: 310},
       legend: {
         itemStyle: {fontSize: '7pt'}
       },
@@ -105,7 +105,7 @@ class PrimaryEnergy
       series: []
     })
     @primary_energy_chart = new Highcharts.Chart({
-      chart: {renderTo: 'supply_chart', height: 250, width: 300},
+      chart: {renderTo: 'supply_chart', height: 250, width: 400},
       title: {text: 'Energy Supply'},
       tooltip: {
         enabled: true,
@@ -137,10 +137,10 @@ class PrimaryEnergy
           text: "TWh/yr"
         },
         min: 0,
-        max: 40000,
+        max: 2000,
         width: 225
       },
-      xAxis: {width: 240},
+      xAxis: {width: 310},
       legend: {
         itemStyle: {fontSize: '7pt'}
       },

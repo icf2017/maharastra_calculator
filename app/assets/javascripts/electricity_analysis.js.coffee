@@ -89,7 +89,7 @@ class ElectricityAnalysis
           text: "TWh/yr"
         },
         min: 0,
-        max: 20000,
+        max: 1000,
         width: 225
       },
       xAxis: {width: 240},

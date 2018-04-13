@@ -60,7 +60,7 @@ class Emissions
       yAxis: {
         labels:
           formatter: ->
-            return Math.round(this.value / 1000) + 'k'
+            return Math.round(this.value)
 
         title: {
           style: {
@@ -74,7 +74,7 @@ class Emissions
           x: 0,
           y: -10,
           text: "MtCO<sub>2</sub>e/yr"
-        }, width: 225, min: -500, max: 15000
+        }, width: 225, min: -10, max: 400
       },
       xAxis: {width: 240},
 
@@ -149,7 +149,7 @@ class Emissions
           text: "tCO2e/person per yr"
         },
         min: -2.5,
-        max: 18,
+        max: 5,
         width: 225,
       xAxis: {width: 240},
 
