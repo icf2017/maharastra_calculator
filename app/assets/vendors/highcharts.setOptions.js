@@ -37,7 +37,6 @@ Highcharts.setOptions({
 
 
   xAxis: {
-    //categories: [2010,2015,2020,2025,2030,2035,2040,2045,2050],
     categories: [2012,2017,2022,2027,2032,2037,2042,2047],
     tickWidth: 0,
     title: { enabled: false },

@@ -12,7 +12,7 @@ $(window).load(function () {
       placement: "top",
       backdrop: true,
       title: "Welcome to Karnataka State Energy Calculator 2050",
-      content: "The IESS, 2047 is an energy scenario building tool, which aims to explore a range of potential future energy scenarios for India, for diverse energy demand and supply sectors, leading up to 2047.<br/> <br/> 21 Energy Demand and Supply sectors, and 50 levers that will impact our energy system are available to the user. Combination of the above choices offer hundreds of energy pathways till the year 2047.",
+      content: "The KSEC, 2050 is an energy scenario building tool, which aims to explore a range of potential future energy scenarios for India, for diverse energy demand and supply sectors, leading up to 2050.<br/> <br/> 21 Energy Demand and Supply sectors, and 50 levers that will impact our energy system are available to the user. Combination of the above choices offer hundreds of energy pathways till the year 2047.",
     },
     {
       element: "ul.navbar-nav",
@@ -130,17 +130,7 @@ $(window).load(function () {
       content: "Choose from several pre-programmed example pathways to witness their implications.",
       backdropPadding: 10,
       animation: true
-    },
-    {
-      element: "#logoImg",
-      placement: "bottom",
-      backdrop: true,
-      title: "Go to the website",
-      content: "To dig deeper into sector specific assumptions and documentation, click on the <a href='http://indiaenergy.gov.in' target='_new'>IESS, 2047</a> to go to the website.",
-      backdropPadding: 10,
-      animation: true
     }
-
   ]);
 
   // Initialize the tour

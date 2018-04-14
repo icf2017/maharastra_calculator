@@ -1,4 +1,4 @@
-# KSEC 2047 Calculator
+# KSEC 2050 Calculator
 
 A web interface to the Karnataka State Energy Calculator 2050
 
