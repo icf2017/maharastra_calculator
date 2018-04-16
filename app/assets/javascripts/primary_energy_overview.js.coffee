@@ -77,28 +77,28 @@ class PrimaryEnergyOverview
 
   html = "
            <select id='year_demand' class='year_demand' name='year_demand'>
-             <option value='2012'>2012</option>
-             <option value='2017'>2017</option>
-             <option value='2022'>2022</option>
-             <option value='2027'>2027</option>
-             <option value='2032'>2032</option>
-             <option value='2037'>2037</option>
-             <option value='2042'>2042</option>
-             <option value='2047' selected >2047</option>
+             <option value='2015'>2015</option>
+             <option value='2020'>2020</option>
+             <option value='2025'>2025</option>
+             <option value='2030'>2030</option>
+             <option value='2035'>2035</option>
+             <option value='2040'>2040</option>
+             <option value='2045'>2045</option>
+             <option value='2050' selected >2050</option>
            </select>
 
          "
 
   html1 = "
            <select id='year_supply' class='year_supply	' name='year_supply'>
-             <option value='2012'>2012</option>
-             <option value='2017'>2017</option>
-             <option value='2022'>2022</option>
-             <option value='2027'>2027</option>
-             <option value='2032'>2032</option>
-             <option value='2037'>2037</option>
-             <option value='2042'>2042</option>
-             <option value='2047' selected >2047</option>
+             <option value='2015'>2015</option>
+             <option value='2020'>2020</option>
+             <option value='2025'>2025</option>
+             <option value='2030'>2030</option>
+             <option value='2035'>2035</option>
+             <option value='2040'>2040</option>
+             <option value='2045'>2045</option>
+             <option value='2050' selected >2050</option>
            </select>
 
          "
@@ -121,7 +121,7 @@ class PrimaryEnergyOverview
     $('#warning').empty()
     $('#display').empty()
 
-    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_chart\")'>Demand & Supply</a></li><li><a href='#' id='energy-subnav-2' class='selected btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_overview_chart\")'>Sector-wise Drilldown</a></li><li><a href='#' id='energy-subnav-3' class='btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_detail_chart\")'>2012 vs 2047</a></li></ul>")
+    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_chart\")'>Demand & Supply</a></li><li><a href='#' id='energy-subnav-2' class='selected btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_overview_chart\")'>Sector-wise Drilldown</a></li><li><a href='#' id='energy-subnav-3' class='btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_detail_chart\")'>2015 vs 2050</a></li></ul>")
 
 
     window.DemandDrill = @energy_comparison_chart = new Highcharts.Chart({
@@ -351,13 +351,13 @@ class PrimaryEnergyOverview
  
     #drill = ["Transport","Cooking","Buildings","Pumps& Tractors"]
 
-    drillTransport = {name:"Transport", id:"Transport",data:[["Road transport",@pathway['demand_year'][2047][6][1]],["Rail transport",@pathway['demand_year'][2047][7][1]],["Domestic aviation",@pathway['demand_year'][2047][8][1]]], type:'	'}
+    drillTransport = {name:"Transport", id:"Transport",data:[["Road transport",@pathway['demand_year'][2050][6][1]],["Rail transport",@pathway['demand_year'][2050][7][1]],["Domestic aviation",@pathway['demand_year'][2050][8][1]]], type:'	'}
 
-    drillBuildings = {name:"Buildings", id:"Buildings",data:[["Commercial Lighting & Appliances",@pathway['demand_year'][2047][3][1]],["Domestic Lighting & appliances",@pathway['demand_year'][2047][2][1]],["Commercial Heating and cooling",@pathway['demand_year'][2047][1][1]],["Residential Heating and cooling",@pathway['demand_year'][2047][0][1]]], type:'pie'}
+    drillBuildings = {name:"Buildings", id:"Buildings",data:[["Commercial Lighting & Appliances",@pathway['demand_year'][2050][3][1]],["Domestic Lighting & appliances",@pathway['demand_year'][2050][2][1]],["Commercial Heating and cooling",@pathway['demand_year'][2050][1][1]],["Residential Heating and cooling",@pathway['demand_year'][2050][0][1]]], type:'pie'}
 
     i = 0
 
-    data = [{name:"Telecom",y:@pathway['demand_year'][2047][11][1]}, {name:"Transport",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['demand_year'][2047][9][1],drilldown: drillTransport},{name: "Industry", y:@pathway['demand_year'][2047][5][1]},{name:"Cooking", y:@pathway['demand_year'][2047][12][1]},{name:"Buildings",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['demand_year'][2047][4][1],drilldown: drillBuildings},{name:"Pumps & Tractors", y:@pathway['demand_year'][2047][10][1]}]
+    data = [{name:"Telecom",y:@pathway['demand_year'][2050][11][1]}, {name:"Transport",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['demand_year'][2050][9][1],drilldown: drillTransport},{name: "Industry", y:@pathway['demand_year'][2050][5][1]},{name:"Cooking", y:@pathway['demand_year'][2050][12][1]},{name:"Buildings",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['demand_year'][2050][4][1],drilldown: drillBuildings},{name:"Pumps & Tractors", y:@pathway['demand_year'][2050][10][1]}]
 
     
     if @energy_comparison_chart.series[i]?
@@ -366,25 +366,25 @@ class PrimaryEnergyOverview
     else
       @energy_comparison_chart.addSeries({name:'Energy Demand',colorByPoint: true, data:data},false)
  
-    @energy_comparison_chart.setTitle({text:'Energy Demand - '+(@pathway['demand_year'][2047][13][1]).toFixed(0)+' TWh/yr'},false)
+    @energy_comparison_chart.setTitle({text:'Energy Demand - '+(@pathway['demand_year'][2050][13][1]).toFixed(0)+' TWh/yr'},false)
 
 
 ########### supply pie chart ########################
 
-    drillBioenergy = {name:"Bioenergy", id:"Bioenergy",data:[["Agriculture",@pathway['supply_year'][2047][12][1]],["Biomass oversupply (imports)",@pathway['supply_year'][2047][13][1]],["Waste",@pathway['supply_year'][2047][11][1]]], type:'pie'}
+    drillBioenergy = {name:"Bioenergy", id:"Bioenergy",data:[["Agriculture",@pathway['supply_year'][2050][12][1]],["Biomass oversupply (imports)",@pathway['supply_year'][2050][13][1]],["Waste",@pathway['supply_year'][2050][11][1]]], type:'pie'}
 
-    drillRenewables = {name:"Renewables and Clean Energy", id:"Renewables and Clean Energy",data:[["Nuclear",@pathway['supply_year'][2047][0][1]],["Solar",@pathway['supply_year'][2047][1][1]],["Wind",@pathway['supply_year'][2047][2][1]],["Hydro",@pathway['supply_year'][2047][6][1]]], type:'pie'}
+    drillRenewables = {name:"Renewables and Clean Energy", id:"Renewables and Clean Energy",data:[["Nuclear",@pathway['supply_year'][2050][0][1]],["Solar",@pathway['supply_year'][2050][1][1]],["Wind",@pathway['supply_year'][2050][2][1]],["Hydro",@pathway['supply_year'][2050][6][1]]], type:'pie'}
 
-    drillCoal = {name:"Coal", id:"Coal",data:[["Coal Imports",@pathway['supply_year'][2047][15][1]],["Coal Production",@pathway['supply_year'][2047][16][1]]], type:'pie'}
+    drillCoal = {name:"Coal", id:"Coal",data:[["Coal Imports",@pathway['supply_year'][2050][15][1]],["Coal Production",@pathway['supply_year'][2050][16][1]]], type:'pie'}
 
-    drillOil = {name:"Oil", id:"Oil",data:[["Oil Production",@pathway['supply_year'][2047][18][1]],["Oil Imports",@pathway['supply_year'][2047][19][1]]], type:'pie'}
+    drillOil = {name:"Oil", id:"Oil",data:[["Oil Production",@pathway['supply_year'][2050][18][1]],["Oil Imports",@pathway['supply_year'][2050][19][1]]], type:'pie'}
 
-    drillGas = {name:"Natural gas", id:"Natural gas",data:[["Gas Imports",@pathway['supply_year'][2047][21][1]],["Gas Production",@pathway['supply_year'][2047][22][1]]], type:'pie'}
+    drillGas = {name:"Natural gas", id:"Natural gas",data:[["Gas Imports",@pathway['supply_year'][2050][21][1]],["Gas Production",@pathway['supply_year'][2050][22][1]]], type:'pie'}
 
 
     i = 0
 
-    data = [{name:"Bioenergy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['supply_year'][2047][14][1], drilldown: drillBioenergy}, {name: "Cross Border Electricity Trade", y:@pathway['supply_year'][2047][7][1]},{name:"Coal", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2047][17][1], drilldown: drillCoal},{name:"Renewables and Clean Energy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2047][8][1], drilldown: drillRenewables},{name:"Oil",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['supply_year'][2047][20][1], drilldown: drillOil},{name:"Natural gas", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2047][23][1], drilldown: drillGas}]
+    data = [{name:"Bioenergy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['supply_year'][2050][14][1], drilldown: drillBioenergy}, {name: "Cross Border Electricity Trade", y:@pathway['supply_year'][2050][7][1]},{name:"Coal", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2050][17][1], drilldown: drillCoal},{name:"Renewables and Clean Energy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2050][8][1], drilldown: drillRenewables},{name:"Oil",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['supply_year'][2050][20][1], drilldown: drillOil},{name:"Natural gas", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2050][23][1], drilldown: drillGas}]
 
     
     if @energy_supply_chart.series[i]?

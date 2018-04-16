@@ -23,7 +23,7 @@ class ElectricityAnalysis
 
     @demand_analysis = new Highcharts.Chart({
       chart: {renderTo: 'demand_analysis', type: 'bar', height: 250, weight: 300, marginLeft: 70},
-      title: {text: 'Electricity demand - Demand Interventions (2047) in TWh'},
+      title: {text: 'Electricity demand - Demand Interventions (2050) in TWh'},
 
       yAxis: {
         labels:
@@ -206,6 +206,6 @@ class ElectricityAnalysis
     @demand_analysis.redraw()
     @supply_analysis.redraw()
 
-    document.getElementById("warning").innerHTML = "<p>This scenario is over generating <b>" + @pathway['electricity']['overgeneration']['Overgeneration'][7] + " TWh </b> of electricity in 2047. You may want to dial back your supply options for minimizing this value</p>"
+    document.getElementById("warning").innerHTML = "<p>This scenario is over generating <b>" + @pathway['electricity']['overgeneration']['Overgeneration'][7] + " TWh </b> of electricity in 2050. You may want to dial back your supply options for minimizing this value</p>"
 
 window.twentyfifty.views['electricity_analysis'] = new ElectricityAnalysis

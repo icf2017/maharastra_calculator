@@ -1,6 +1,6 @@
 LandShare = "
   <div id='PercentLand' style='float:right; width:100%'> 
-    <h6>Percent Share of Land Requirement (2047)</h6>
+    <h6>Percent Share of Land Requirement (2050)</h6>
     <table style='width:100%; float:left' cellpadding='8' border=1>
     </table>
   </div>
@@ -42,7 +42,7 @@ class LandUse
 
         margin: [55, 25, 15, 90],
       },
-      title: {text: 'Land Footprint (2047)'},
+      title: {text: 'Land Footprint (2050)'},
       subtitle: {text: "In Million hectares of land"},
       yAxis: {
         labels:

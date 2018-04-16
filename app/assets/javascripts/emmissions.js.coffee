@@ -248,19 +248,19 @@ class Emissions
         @total_emissions_chart.addSeries({name: titles_charts[i - 1], data: data}, false)
       i++
 
-    data_2047 = @pathway["emissions_percapita"]["Total per capita Emissions in MT CO2"][7]
-    $("#total_percapita_emissions_map p").html Highcharts.numberFormat(data_2047, 1, ".") + " tCO2e/capita<br>(2047)"
+    data_2050 = @pathway["emissions_percapita"]["Total per capita Emissions in MT CO2"][7]
+    $("#total_percapita_emissions_map p").html Highcharts.numberFormat(data_2050, 1, ".") + " tCO2e/capita<br>(2050)"
     $("#total_percapita_emissions_map").css backgroundColor: "#ccc"
-    $("#total_percapita_emissions_map").css backgroundColor: "#bbb"  if data_2047 > 3.5 and data_2047 <= 4
-    $("#total_percapita_emissions_map").css backgroundColor: "#aaa"  if data_2047 > 4 and data_2047 <= 4.5
-    $("#total_percapita_emissions_map").css backgroundColor: "#999"  if data_2047 > 4.5 and data_2047 <= 5
-    $("#total_percapita_emissions_map").css backgroundColor: "#888"  if data_2047 > 5 and data_2047 <= 5.5
-    $("#total_percapita_emissions_map").css backgroundColor: "#777"  if data_2047 > 5.5 and data_2047 <= 6
-    $("#total_percapita_emissions_map").css backgroundColor: "#666"  if data_2047 > 6 and data_2047 <= 6.5
-    $("#total_percapita_emissions_map").css backgroundColor: "#555"  if data_2047 > 6.5 and data_2047 <= 7
-    $("#total_percapita_emissions_map").css backgroundColor: "#444"  if data_2047 > 7 and data_2047 <= 7.5
-    $("#total_percapita_emissions_map").css backgroundColor: "#333"  if data_2047 > 7.5 and data_2047 <= 8
-    $("#total_percapita_emissions_map").css backgroundColor: "#222"  if data_2047 > 8 and data_2047 <= 8.5
+    $("#total_percapita_emissions_map").css backgroundColor: "#bbb"  if data_2050 > 3.5 and data_2050 <= 4
+    $("#total_percapita_emissions_map").css backgroundColor: "#aaa"  if data_2050 > 4 and data_2050 <= 4.5
+    $("#total_percapita_emissions_map").css backgroundColor: "#999"  if data_2050 > 4.5 and data_2050 <= 5
+    $("#total_percapita_emissions_map").css backgroundColor: "#888"  if data_2050 > 5 and data_2050 <= 5.5
+    $("#total_percapita_emissions_map").css backgroundColor: "#777"  if data_2050 > 5.5 and data_2050 <= 6
+    $("#total_percapita_emissions_map").css backgroundColor: "#666"  if data_2050 > 6 and data_2050 <= 6.5
+    $("#total_percapita_emissions_map").css backgroundColor: "#555"  if data_2050 > 6.5 and data_2050 <= 7
+    $("#total_percapita_emissions_map").css backgroundColor: "#444"  if data_2050 > 7 and data_2050 <= 7.5
+    $("#total_percapita_emissions_map").css backgroundColor: "#333"  if data_2050 > 7.5 and data_2050 <= 8
+    $("#total_percapita_emissions_map").css backgroundColor: "#222"  if data_2050 > 8 and data_2050 <= 8.5
 
     i = 0
 

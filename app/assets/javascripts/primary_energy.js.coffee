@@ -20,7 +20,7 @@ class PrimaryEnergy
 
     $('#display').empty()
 
-    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='selected btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_chart\")'>Demand & Supply</a></li><li><a href='#' id='energy-subnav-2' class='btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_overview_chart\")'>Sector-wise Drilldown</a></li><li><a href='#' id='energy-subnav-3' class='btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_detail_chart\")'>2012 vs 2047</a></li></ul>")
+    $('#display').append("<h5>Explore</h5><ul class='subnav'><li><a href='#' id='energy-subnav-1' class='selected btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_chart\")'>Demand & Supply</a></li><li><a href='#' id='energy-subnav-2' class='btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_overview_chart\")'>Sector-wise Drilldown</a></li><li><a href='#' id='energy-subnav-3' class='btn btn-dark' onclick='twentyfifty.switchView(\"primary_energy_detail_chart\")'>2015 vs 2050</a></li></ul>")
 
     document.getElementById("results").style.overflow = "inherit"
 
@@ -404,7 +404,7 @@ class PrimaryEnergy
     @primary_energy_chart.redraw()
 
 
-    document.getElementById("warning").innerHTML = "<p>This scenario is over generating <b>" + @pathway['electricity']['overgeneration']['Overgeneration'][7] + " TWh </b> of electricity in 2047. You may want to dial back your supply options for minimizing this value</p>"
+    document.getElementById("warning").innerHTML = "<p>This scenario is over generating <b>" + @pathway['electricity']['overgeneration']['Overgeneration'][7] + " TWh </b> of electricity in 2050. You may want to dial back your supply options for minimizing this value</p>"
 
 
 window.twentyfifty.views['primary_energy_chart'] = new PrimaryEnergy

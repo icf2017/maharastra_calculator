@@ -37,18 +37,20 @@ Highcharts.setOptions({
 
 
   xAxis: {
-    categories: [2012,2017,2022,2027,2032,2037,2042,2047],
+    categories: [2015,2020,2025,2030,2035,2040,2045,2050],
     tickWidth: 0,
     title: { enabled: false },
     labels: {
       formatter: function() {
         switch(this.value) {
-          case 2012: return 2012; break;
-          case 2017: return 2017; break;
-          //case 2022: return 2022; break;
-          case 2027: return 2027; break;
-          case 2037: return 2037; break;
-          case 2047: return 2047; break;
+          case 2015: return 2015; break;
+          case 2020: return 2020; break;
+          case 2025: return 2025; break;
+          case 2030: return 2030; break;
+          case 2035: return 2035; break;
+          case 2040: return 2040; break;
+          case 2045: return 2045; break;
+          case 2050: return 2050; break;
         }
       },
       style:{

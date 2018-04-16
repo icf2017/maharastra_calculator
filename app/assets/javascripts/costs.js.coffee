@@ -6,7 +6,7 @@ class CostsNew
     document.getElementById("results").style.width = "65%"
     document.getElementById("warning").style.width = "22%"
     target = $('#results')
-    target.append("<div id = 'increamental' class='chart'></div><div id='pathway' class='pathway_text'>This cost is <b>0%</b> of the cumulative GDP till the year 2047</div>")
+    target.append("<div id = 'increamental' class='chart'></div><div id='pathway' class='pathway_text'>This cost is <b>0%</b> of the cumulative GDP till the year 2050</div>")
 
 
 

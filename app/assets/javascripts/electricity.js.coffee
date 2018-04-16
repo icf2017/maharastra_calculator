@@ -455,6 +455,6 @@ class Electricity
     @supply_chart.redraw()
     @electricity_overgeneration.redraw()
 
-    document.getElementById("warning").innerHTML = "<p>This scenario is over generating <b>" + @pathway['electricity']['overgeneration']['Overgeneration'][7] + " TWh </b> of electricity in 2047. You may want to dial back your supply options for minimizing this value</p>"
+    document.getElementById("warning").innerHTML = "<p>This scenario is over generating <b>" + @pathway['electricity']['overgeneration']['Overgeneration'][7] + " TWh </b> of electricity in 2050. You may want to dial back your supply options for minimizing this value</p>"
 
 window.twentyfifty.views['electricity'] = new Electricity

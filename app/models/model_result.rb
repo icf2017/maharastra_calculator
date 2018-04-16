@@ -67,7 +67,7 @@ class ModelResult < ModelUtilities
 
   def demand_year
     demand = {} 
-    j = 2012
+    j = 2015
     ('ba'..'bh').each do |num| 
     demand[j] = []
       (7..20).each do |row|
@@ -80,7 +80,7 @@ class ModelResult < ModelUtilities
 
   def supply_year
     supply = {} 
-    j = 2012
+    j = 2015
     ('ba'..'bh').each do |num| 
     supply[j] = []
       (25..49).each do |row|
@@ -152,7 +152,7 @@ class ModelResult < ModelUtilities
   def sankey_table
     s = {} 
     #(6..94).each do |row|
-    j = 2012
+    j = 2015
     ('f'..'m').each do |num| 
     s[j] = []
       (6..84).each do |row|
@@ -175,7 +175,7 @@ class ModelResult < ModelUtilities
 
   def land_table
     l = {} 
-    j = 2012
+    j = 2015
     ('i'..'p').each do |num| 
     l[j] = []
       (6..23).each do |row|

@@ -6,14 +6,14 @@ shareHTML = """
         <tr>
           <th>Year</th>
           <th>Units</th>
-          <th>2012</th>
-          <th>2017</th>
-          <th>2022</th>
-          <th>2027</th>
-          <th>2032</th>
-          <th>2037</th>
-          <th>2042</th>
-          <th>2047</th>
+          <th>2015</th>
+          <th>2020</th>
+          <th>2025</th>
+          <th>2030</th>
+          <th>2035</th>
+          <th>2040</th>
+          <th>2045</th>
+          <th>2050</th>
         </tr>
       </thead>
     </table>
@@ -59,8 +59,5 @@ class Assumptions
     while j < 10
       $('#g_assump').append('<tr><td style="font-weight: bold;">'+@pathway['global_assumption'][j][0]+'</td><td>'+@pathway['global_assumption'][j][1]+'</td><td>'+(@pathway['global_assumption'][j][2])+'</td><td>'+(@pathway['global_assumption'][j][3])+'</td><td>'+(@pathway['global_assumption'][j][4])+'</td><td>'+(@pathway['global_assumption'][j][5])+'</td><td>'+(@pathway['global_assumption'][j][6])+'</td><td>'+(@pathway['global_assumption'][j][7])+'</td><td>'+(@pathway['global_assumption'][j][8])+'</td><td>'+(@pathway['global_assumption'][j][9])+'</td></tr>')
       j++
-    
-
-      
 
 window.twentyfifty.views['assumptions'] = new Assumptions
