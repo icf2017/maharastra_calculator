@@ -10,14 +10,14 @@ class LandUse
 
   constructor: () ->
 
-  html = "<p>India's Land Area <br> <b></b></p>"
+  html = "<p>Karnataka's Land Area <br> <b></b></p>"
 
   setup: () ->
     document.getElementById("results").style.width = "75%"
     target = $('#results')
 
     target.append("<div id='land_use' class='chart'></div>")
-    target.append("<div id='land_map' style='background-image:url(../../assets/images/india.jpg);background-size: 100% 100%; background-repeat: no-repeat;' class='chart'></div>")
+    target.append("<div id='land_map' style='background-image:url(../../assets/images/karnataka.png);background-size: 100% 100%; background-repeat: no-repeat;' class='chart'></div>")
     target.append("<div id='land_share' class='chart'></div>")
 
     target.append(html)
@@ -162,7 +162,7 @@ class LandUse
     @updateNavBar()
     @setup() unless @land_chart? && @land_map?
 
-    $('#results p b').html((@pathway['land_do_nothing']["India's Land Area"][1]).toFixed(0) + ' M ha')
+    $('#results p b').html((@pathway['land_do_nothing']["State's Land Area"][1]).toFixed(0) + ' M ha')
 
     titles_land_do_nothing = ['Renewables', 'Conventional', 'Bio Energy', 'Total']
 
@@ -209,10 +209,10 @@ class LandUse
     else
       @land_map.addSeries({name: 'Total Area', colorByPoint: true, data: data}, false)
 
-    data = [((@pathway["land_do_nothing"]["Renewables"][1]) / (@pathway["land_do_nothing"]["India\'s Land Area"][1]) * 100).toFixed(2),
-      ((@pathway["land_do_nothing"]["Conventional"][1]) / (@pathway["land_do_nothing"]["India\'s Land Area"][1]) * 100).toFixed(2),
-      ((@pathway["land_do_nothing"]["Bio Energy"][1]) / (@pathway["land_do_nothing"]["India\'s Land Area"][1]) * 100).toFixed(2),
-      ((@pathway["land_do_nothing"]["Total"][1]) / (@pathway["land_do_nothing"]["India\'s Land Area"][1]) * 100).toFixed(2)]
+    data = [((@pathway["land_do_nothing"]["Renewables"][1]) / (@pathway["land_do_nothing"]["State's Land Area"][1]) * 100).toFixed(2),
+      ((@pathway["land_do_nothing"]["Conventional"][1]) / (@pathway["land_do_nothing"]["State's Land Area"][1]) * 100).toFixed(2),
+      ((@pathway["land_do_nothing"]["Bio Energy"][1]) / (@pathway["land_do_nothing"]["State's Land Area"][1]) * 100).toFixed(2),
+      ((@pathway["land_do_nothing"]["Total"][1]) / (@pathway["land_do_nothing"]["State's Land Area"][1]) * 100).toFixed(2)]
 
 
     $('#PercentLand table').empty()
