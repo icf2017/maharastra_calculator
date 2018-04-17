@@ -209,7 +209,7 @@ class SankeyDisplay
       #@recolour(@boxes["T&D Losses"].left_lines,"#ddd")
       #@recolour(@boxes["Electricity Grid"].left_lines,"#CCEEFF")
 
-    pixels_per_TWh = $('#sankey').height() / 100000
+    pixels_per_TWh = $('#sankey').height() / 10000
 
     @s.y_space = 25 #Math.round(1000 * pixels_per_TWh)
     @s.right_margin = 250

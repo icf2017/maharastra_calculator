@@ -121,12 +121,14 @@ div.warning_option {
   font-weight: 800;
 }
 
-#SeriesData0 {
-  width: 90px !important;
+#display-data0 .series-data{
+  width: 12.5% !important;
+  text-align: center;
 }
 
-#SeriesData1, #SeriesData2, #SeriesData3 {
-  width: 60px !important;
+#display-data1 .series-data{
+  width: 12.5% !important;
+  text-align: center;
 }
 
 .legend-show {

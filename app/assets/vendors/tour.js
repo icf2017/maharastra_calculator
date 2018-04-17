@@ -12,7 +12,7 @@ $(window).load(function () {
       placement: "top",
       backdrop: true,
       title: "Welcome to Karnataka State Energy Calculator 2050",
-      content: "The KSEC, 2050 is an energy scenario building tool, which aims to explore a range of potential future energy scenarios for India, for diverse energy demand and supply sectors, leading up to 2050.<br/> <br/> 21 Energy Demand and Supply sectors, and 50 levers that will impact our energy system are available to the user. Combination of the above choices offer hundreds of energy pathways till the year 2047.",
+      content: "The KSEC, 2050 is an energy scenario building tool, which aims to explore a range of potential future energy scenarios for India, for diverse energy demand and supply sectors, leading up to 2050.<br/> <br/> 17 Energy Demand and Supply sectors, and 38 levers that will impact our energy system are available to the user. Combination of the above choices offer hundreds of energy pathways till the year 2050.",
     },
     {
       element: "ul.navbar-nav",

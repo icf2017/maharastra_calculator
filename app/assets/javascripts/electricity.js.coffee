@@ -57,7 +57,7 @@ class Electricity
         max: 1000,
         width: 225
       },
-      xAxis: {width: 240},
+      xAxis: {width: 255},
       legend: {
         itemStyle: {fontSize: '7pt'}
       },
@@ -77,8 +77,12 @@ class Electricity
               twentyfifty.highlightLegend "custom-legend0", this.index, true
               Ddata = [
                 Highcharts.numberFormat(@yData[0], 0, ",")
+                Highcharts.numberFormat(@yData[1], 0, ",")
+                Highcharts.numberFormat(@yData[2], 0, ",")
                 Highcharts.numberFormat(@yData[3], 0, ",")
+                Highcharts.numberFormat(@yData[4], 0, ",")
                 Highcharts.numberFormat(@yData[5], 0, ",")
+                Highcharts.numberFormat(@yData[6], 0, ",")
                 Highcharts.numberFormat(@yData[7], 0, ",")
               ]
 
@@ -86,7 +90,7 @@ class Electricity
 
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data0 #SeriesData" + i).html Ddata[i]
                 i++
               return
@@ -95,7 +99,7 @@ class Electricity
               twentyfifty.highlightLegend "custom-legend0", this.index, false
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data0 #SeriesData" + i).empty()
                 i++
               $("#display-data0 #SeriesName").empty()
@@ -139,7 +143,7 @@ class Electricity
         max: 1000,
         width: 225
       },
-      xAxis: {width: 240},
+      xAxis: {width: 255},
       legend: {
         itemStyle: {fontSize: '7pt'}
       },
@@ -159,8 +163,12 @@ class Electricity
               twentyfifty.highlightLegend "custom-legend1", this.index, true
               Ddata = [
                 Highcharts.numberFormat(@yData[0], 0, ",")
+                Highcharts.numberFormat(@yData[1], 0, ",")
+                Highcharts.numberFormat(@yData[2], 0, ",")
                 Highcharts.numberFormat(@yData[3], 0, ",")
+                Highcharts.numberFormat(@yData[4], 0, ",")
                 Highcharts.numberFormat(@yData[5], 0, ",")
+                Highcharts.numberFormat(@yData[6], 0, ",")
                 Highcharts.numberFormat(@yData[7], 0, ",")
               ]
 
@@ -168,7 +176,7 @@ class Electricity
 
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data1 #SeriesData" + i).html Ddata[i]
                 i++
               return
@@ -177,7 +185,7 @@ class Electricity
               twentyfifty.highlightLegend "custom-legend1", this.index, false
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data1 #SeriesData" + i).empty()
                 i++
               $("#display-data1 #SeriesName").empty()

@@ -99,8 +99,8 @@ callCommon = (chartIdArr) ->
     ).appendTo(chartIdArr[i])
     z = 0
 
-    while z < 4
-      $("<p id=\"SeriesData" + z + "\">").css(
+    while z < 8
+      $("<p class='series-data' id=\"SeriesData" + z + "\">").css(
         width: 43
         paddingRight: 5
         paddingLeft: 5
@@ -108,7 +108,8 @@ callCommon = (chartIdArr) ->
         margin: 0
         float: "left"
         fontWeight: "bold"
-        fontSize: 10
+        fontSize: 10,
+        'text-align': 'center'
       ).appendTo $xData
 
       z++;

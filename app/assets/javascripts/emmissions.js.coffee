@@ -76,7 +76,7 @@ class Emissions
           text: "MtCO<sub>2</sub>e/yr"
         }, width: 225, min: -10, max: 400
       },
-      xAxis: {width: 240},
+      xAxis: {width: 255},
 
       plotOptions:
         area:
@@ -94,14 +94,18 @@ class Emissions
               twentyfifty.highlightLegend "custom-legend0", this.index, true
               Ddata = [
                 Highcharts.numberFormat(@yData[0], 1, ".")
+                Highcharts.numberFormat(@yData[1], 1, ".")
+                Highcharts.numberFormat(@yData[2], 1, ".")
                 Highcharts.numberFormat(@yData[3], 1, ".")
+                Highcharts.numberFormat(@yData[4], 1, ".")
                 Highcharts.numberFormat(@yData[5], 1, ".")
+                Highcharts.numberFormat(@yData[6], 1, ".")
                 Highcharts.numberFormat(@yData[7], 1, ".")
               ]
               $("#display-data0 #SeriesName").html this.name
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data0 #SeriesData" + i).html Ddata[i]
                 i++
               return
@@ -110,7 +114,7 @@ class Emissions
               twentyfifty.highlightLegend "custom-legend0", this.index, false
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data0 #SeriesData" + i).empty()
                 i++
               $("#display-data0 #SeriesName").empty()
@@ -150,8 +154,8 @@ class Emissions
         },
         min: -2.5,
         max: 5,
-        width: 225,
-      xAxis: {width: 240},
+        width: 255,
+      xAxis: {width: 255},
 
       plotOptions:
         area:
@@ -169,13 +173,17 @@ class Emissions
               twentyfifty.highlightLegend "custom-legend1", this.index, true
               Ddata = [
                 Highcharts.numberFormat(@yData[0], 1, ".")
+                Highcharts.numberFormat(@yData[1], 1, ".")
+                Highcharts.numberFormat(@yData[2], 1, ".")
                 Highcharts.numberFormat(@yData[3], 1, ".")
+                Highcharts.numberFormat(@yData[4], 1, ".")
                 Highcharts.numberFormat(@yData[5], 1, ".")
+                Highcharts.numberFormat(@yData[6], 1, ".")
                 Highcharts.numberFormat(@yData[7], 1, ".")
               ]
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data1 #SeriesData" + i).html Ddata[i]
                 i++
               return
@@ -184,7 +192,7 @@ class Emissions
               twentyfifty.highlightLegend "custom-legend1", this.index, false
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data1 #SeriesData" + i).empty()
                 i++
               return

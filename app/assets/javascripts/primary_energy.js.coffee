@@ -30,7 +30,7 @@ class PrimaryEnergy
       yAxis: {
         labels:
           formatter: ->
-            return Math.round(this.value / 1000) + 'k'
+            return Math.round(this.value)
 
         title: {
           style: {
@@ -80,14 +80,18 @@ class PrimaryEnergy
               twentyfifty.highlightLegend "custom-legend0", this.index, true
               Ddata = [
                 Highcharts.numberFormat(@yData[0], 0, ",")
+                Highcharts.numberFormat(@yData[1], 0, ",")
+                Highcharts.numberFormat(@yData[2], 0, ",")
                 Highcharts.numberFormat(@yData[3], 0, ",")
+                Highcharts.numberFormat(@yData[4], 0, ",")
                 Highcharts.numberFormat(@yData[5], 0, ",")
+                Highcharts.numberFormat(@yData[6], 0, ",")
                 Highcharts.numberFormat(@yData[7], 0, ",")
               ]
               $("#display-data0 #SeriesName").html this.name
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data0 #SeriesData" + i).html Ddata[i]
                 i++
               return
@@ -96,7 +100,7 @@ class PrimaryEnergy
               twentyfifty.highlightLegend "custom-legend0", this.index, false
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data0 #SeriesData" + i).empty()
                 i++
               $("#display-data0 #SeriesName").empty()
@@ -121,7 +125,7 @@ class PrimaryEnergy
       yAxis: {
         labels:
           formatter: ->
-            return Math.round(this.value / 1000) + 'k'
+            return Math.round(this.value)
 
         title: {
           style: {
@@ -137,8 +141,8 @@ class PrimaryEnergy
           text: "TWh/yr"
         },
         min: 0,
-        max: 2000,
-        width: 225
+        max: 1500,
+        width: 250
       },
       xAxis: {width: 310},
       legend: {
@@ -152,7 +156,7 @@ class PrimaryEnergy
           states:
             hover:
               enabled: true
-              lineWidth: 2
+              lineWidth: 1
               lineColor: "#6c6c6c"
 
           events:
@@ -160,8 +164,12 @@ class PrimaryEnergy
               twentyfifty.highlightLegend "custom-legend1", this.index, true
               Ddata = [
                 Highcharts.numberFormat(@yData[0], 0, ",")
+                Highcharts.numberFormat(@yData[1], 0, ",")
+                Highcharts.numberFormat(@yData[2], 0, ",")
                 Highcharts.numberFormat(@yData[3], 0, ",")
+                Highcharts.numberFormat(@yData[4], 0, ",")
                 Highcharts.numberFormat(@yData[5], 0, ",")
+                Highcharts.numberFormat(@yData[6], 0, ",")
                 Highcharts.numberFormat(@yData[7], 0, ",")
               ]
 
@@ -169,7 +177,7 @@ class PrimaryEnergy
 
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data1 #SeriesData" + i).html Ddata[i]
                 i++
               return
@@ -178,7 +186,7 @@ class PrimaryEnergy
               twentyfifty.highlightLegend "custom-legend1", this.index, false
               i = 0
 
-              while i < 4
+              while i < 8
                 $("#display-data1 #SeriesData" + i).empty()
                 i++
               $("#display-data1 #SeriesName").empty()
@@ -202,14 +210,6 @@ class PrimaryEnergy
   updateResults: (@pathway) ->
     @updateNavBar()
     @setup() unless @final_energy_chart? && @primary_energy_chart?
-
-    titles_dependency = ['Coal',
-      'Oil',
-      'Gas',
-      'Overall',
-    ]
-
-    i = 0
 
     titles = ["Telecom", "Transport", "Industry", "Cooking", "Buildings", "Pumps& Tractors"]
     i = 0
