@@ -47,7 +47,7 @@ class PrimaryEnergy
           text: "TWh/yr"
         },
         min: 0,
-        max: 1000
+        max: 2000
       },
       xAxis: {width: 310},
       legend: {
@@ -141,8 +141,8 @@ class PrimaryEnergy
           text: "TWh/yr"
         },
         min: 0,
-        max: 1500,
-        width: 250
+        max: 2500,
+        width: 290
       },
       xAxis: {width: 310},
       legend: {
