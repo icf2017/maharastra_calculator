@@ -56,7 +56,7 @@ class Assumptions
     $('#g_assump').append('<tr class=""><td style="font-weight: bold;">'+@pathway['global_assumption'][0][0]+'</td><td>'+@pathway['global_assumption'][0][1]+'</td><td>'+(@pathway['global_assumption'][0][2]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][3]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][4]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][5]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][6]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][7]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][8]).toFixed(2)+'</td><td>'+(@pathway['global_assumption'][0][9]).toFixed(2)+'</td></tr>')
 
     j = 1
-    while j < 10
+    while j < 8
       $('#g_assump').append('<tr><td style="font-weight: bold;">'+@pathway['global_assumption'][j][0]+'</td><td>'+@pathway['global_assumption'][j][1]+'</td><td>'+(@pathway['global_assumption'][j][2])+'</td><td>'+(@pathway['global_assumption'][j][3])+'</td><td>'+(@pathway['global_assumption'][j][4])+'</td><td>'+(@pathway['global_assumption'][j][5])+'</td><td>'+(@pathway['global_assumption'][j][6])+'</td><td>'+(@pathway['global_assumption'][j][7])+'</td><td>'+(@pathway['global_assumption'][j][8])+'</td><td>'+(@pathway['global_assumption'][j][9])+'</td></tr>')
       j++
 
