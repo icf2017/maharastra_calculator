@@ -33,7 +33,7 @@ class ElectricityAnalysis
       },
 
       xAxis: {
-        categories: ['Transport', 'Industry', 'Cooking', 'Buildings', 'Telecom', 'Agricuture'],
+        categories: ['Transport', 'Industry', 'Cooking', 'Buildings', 'Agricuture'],
         labels:
           style: {
             color: '#000',
@@ -151,7 +151,7 @@ class ElectricityAnalysis
 
 
     # Demand for electricity
-    titles = ['Transport', 'Industry', 'Cooking', 'Buildings', 'Telecom', 'Pumps& Tractors']
+    titles = ['Transport', 'Industry', 'Cooking', 'Buildings', 'Pumps& Tractors']
 
 
     for name in titles
@@ -162,7 +162,6 @@ class ElectricityAnalysis
       {y: @pathway['electricity']['demand']['Industry'][7], color: '#CC6699'},
       {y: @pathway['electricity']['demand']['Cooking'][7], color: '#709d40'},
       {y: @pathway['electricity']['demand']['Buildings'][7], color: '#FF9900'},
-      {y: @pathway['electricity']['demand']['Telecom'][7], color: '#0f6b62'},
       @pathway['electricity']['demand']['Pumps& Tractors'][7]]
 
     if @demand_analysis.series[0]?

@@ -1,5 +1,5 @@
 LandShare = "
-  <div id='PercentLand' style='float:right; width:100%'> 
+  <div id='PercentLand' style='float:right; width:100%'>
     <h6>Percent Share of Land Requirement (2050)</h6>
     <table style='width:100%; float:left' cellpadding='8' border=1>
     </table>
@@ -121,27 +121,16 @@ class LandUse
 
         pointFormat: '<b>{point.y:.1f} M ha</b>',
 
-      }
-
+      },
       plotOptions: {
         pie: {
           size: '35%',
           center: [60, 105],
           allowPointSelect: true,
-          cursor: 'pointer',
-          dataLabels: {
-            distance: -5,
-            enabled: true,
-            format: '<b>{point.name}</b>: <br><b>{point.y:.1f} M ha</b>',
-            style: {
-              color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-            }
-          }
+          cursor: 'pointer'
         }
       },
-
       series: []
-
     })
 
   teardown: () ->

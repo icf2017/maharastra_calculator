@@ -130,7 +130,7 @@ class PrimaryEnergyOverview
       subtitle: { text: 'Click on underlined sector for a sub-sector drilldown',verticalAlign: 'bottom', y: 12 },
 
       xAxis:{ 
-        categories: ["Telecom","Transport","Industry","Cooking","Lighting-Appliances","Agriculture"] },
+        categories: ["Transport","Industry","Cooking","Lighting-Appliances","Agriculture"] },
       legend:{
         itemStyle: { fontSize: '7pt' }
       },
@@ -289,7 +289,13 @@ class PrimaryEnergyOverview
 
           drillBuildings = {name:"Buildings", id:"Buildings",data:[["Commercial Lighting & Appliances",data['demand_year'][DDyear][3][1]],["Domestic Lighting & appliances",data['demand_year'][DDyear][2][1]],["Commercial Heating and cooling",data['demand_year'][DDyear][1][1]],["Residential Heating and cooling",data['demand_year'][DDyear][0][1]]], type:'pie'}
 
-          data_in = [{name:"Telecom",y:data['demand_year'][DDyear][11][1]}, {name:"Transport",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:data['demand_year'][DDyear][9][1],drilldown: drillTransport},{name: "Industry", y:data['demand_year'][DDyear][5][1]},{name:"Cooking", y:data['demand_year'][DDyear][12][1]},{name:"Buildings",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:data['demand_year'][DDyear][4][1],drilldown: drillBuildings},{name:"Pumps & Tractors", y:data['demand_year'][DDyear][10][1]}]
+          data_in = [
+            {name:"Transport",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:data['demand_year'][DDyear][9][1],drilldown: drillTransport},
+            {name: "Industry", y:data['demand_year'][DDyear][5][1]},
+            {name:"Cooking", y:data['demand_year'][DDyear][12][1]},
+            {name:"Buildings",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:data['demand_year'][DDyear][4][1],drilldown: drillBuildings},
+            {name:"Pumps & Tractors", y:data['demand_year'][DDyear][10][1]}
+          ]
 
 
 
@@ -357,7 +363,13 @@ class PrimaryEnergyOverview
 
     i = 0
 
-    data = [{name:"Telecom",y:@pathway['demand_year'][2050][11][1]}, {name:"Transport",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['demand_year'][2050][9][1],drilldown: drillTransport},{name: "Industry", y:@pathway['demand_year'][2050][5][1]},{name:"Cooking", y:@pathway['demand_year'][2050][12][1]},{name:"Buildings",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['demand_year'][2050][4][1],drilldown: drillBuildings},{name:"Pumps & Tractors", y:@pathway['demand_year'][2050][10][1]}]
+    data = [
+      { name:"Transport",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['demand_year'][2050][9][1],drilldown: drillTransport},
+      {name: "Industry", y:@pathway['demand_year'][2050][5][1]},
+      {name:"Cooking", y:@pathway['demand_year'][2050][12][1]},
+      {name:"Buildings",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['demand_year'][2050][4][1],drilldown: drillBuildings},
+      {name:"Pumps & Tractors", y:@pathway['demand_year'][2050][10][1]}
+    ]
 
     
     if @energy_comparison_chart.series[i]?

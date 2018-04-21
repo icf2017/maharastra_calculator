@@ -183,7 +183,7 @@ class PrimaryEnergyDetail
     
     @setup() unless @energy_demand_chart? && @energy_supply_chart? && @energy_comparison_chart
 
-    titles = ["Telecom","Transport","Industry","Cooking","Buildings","Pumps& Tractors",
+    titles = ["Transport","Industry","Cooking","Buildings","Pumps& Tractors",
     ]
     i = 0
     for name in titles

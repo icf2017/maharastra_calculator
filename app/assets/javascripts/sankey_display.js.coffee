@@ -146,7 +146,6 @@ class SankeyDisplay
       "Freight Transport",
       "Industry",
       "Agriculture",
-      "Telecom",
       "Over Generation/Exports",
       "T&D Losses",
       "Losses"

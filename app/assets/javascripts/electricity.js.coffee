@@ -292,7 +292,7 @@ class Electricity
 
 
     # Demand for electricity
-    titles = ['Transport', 'Industry', 'Cooking', 'Buildings', 'Telecom', 'Pumps& Tractors']
+    titles = ['Transport', 'Industry', 'Cooking', 'Buildings', 'Pumps& Tractors']
     i = 0
 
     data = @pathway['electricity']['demand']['Total']

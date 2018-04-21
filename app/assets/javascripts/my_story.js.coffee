@@ -23,10 +23,6 @@ MystoryHTML = "
         <h4>Agriculture</h4>
         <span></span>
       </div>
-      <div id='story_Tel_demand'>
-        <h4>Telecom</h4>
-        <span></span>
-      </div>
     </div>
     <div>
       <table id='story_supply'>
@@ -104,10 +100,6 @@ class MyStory
   
     $('#story_A_demand span').empty()
     $('#story_A_demand span').append(@pathway['my_story'][36][0]+' '+(@pathway['my_story'][36][1]).toFixed(0)+' '+@pathway['my_story'][37][0]+' '+((@pathway['my_story'][37][1]).toFixed(2)*100)+'% '+@pathway['my_story'][38][0]+' '+((@pathway['my_story'][38][1]).toFixed(2)*100)+'% '+@pathway['my_story'][39][0]+' '+((@pathway['my_story'][39][1]).toFixed(2)*100)+'% '+@pathway['my_story'][40][0])
-  
-    $('#story_Tel_demand span').empty()
-    $('#story_Tel_demand span').append(@pathway['my_story'][43][0]+' '+(@pathway['my_story'][43][1]).toFixed(0)+' '+@pathway['my_story'][44][0]+' '+((@pathway['my_story'][44][1]).toFixed(2)*100)+'% '+@pathway['my_story'][45][0]+' '+((@pathway['my_story'][45][1]).toFixed(2)*100)+'% '+@pathway['my_story'][46][0]+' '+((@pathway['my_story'][46][1]*100).toFixed(0))+'% '+@pathway['my_story'][47][0]+' '+((@pathway['my_story'][47][1]*100).toFixed(0))+'% '+@pathway['my_story'][48][0])
-
   
     $('#story_supply').empty()
     $('#story_supply').append('<tr><th>'+@pathway['my_story'][53][0]+'</th><th>'+@pathway['my_story'][53][1]+'</th><th>'+@pathway['my_story'][53][2]+'</th></tr>');

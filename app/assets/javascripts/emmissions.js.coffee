@@ -5,7 +5,6 @@ class Emissions
     'Industry',
     'Transport'
     'Agriculture',
-    'Telecom',
     'Fossil fuel production',
     'Bioenergy',
 
@@ -16,7 +15,6 @@ class Emissions
     'Industry',
     'Transport'
     'Agriculture',
-    'Telecom',
     'Fossil fuel Production',
     'Bioenergy',
 
@@ -28,7 +26,6 @@ class Emissions
     "Industry",
     "Transport",
     "Agriculture",
-    "Telecom",
     "Fossil fuel production",
     "Bioenergy",
   ]
@@ -74,7 +71,7 @@ class Emissions
           x: 0,
           y: -10,
           text: "MtCO<sub>2</sub>e/yr"
-        }, width: 225, min: -10, max: 400
+        }, width: 225, min: -10, max: 500
       },
       xAxis: {width: 255},
 

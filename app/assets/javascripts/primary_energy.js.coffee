@@ -211,7 +211,7 @@ class PrimaryEnergy
     @updateNavBar()
     @setup() unless @final_energy_chart? && @primary_energy_chart?
 
-    titles = ["Telecom", "Transport", "Industry", "Cooking", "Buildings", "Pumps& Tractors"]
+    titles = ["Transport", "Industry", "Cooking", "Buildings", "Pumps& Tractors"]
     i = 0
 
 
