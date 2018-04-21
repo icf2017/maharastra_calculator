@@ -60,7 +60,7 @@ class ModelStructure < ModelUtilities
   end
   
   def generate_example_pathways
-    ('n'..'z').to_a.push('aa','ab').map do |column|
+    ('n'..'q').to_a.push('u', 'v', 'w', 'z').map do |column|
       {
         name: r("control_#{column}4"),
         code: convert_float_to_letters((5..63).map { |row| r("control_#{column}#{row}") }).join,

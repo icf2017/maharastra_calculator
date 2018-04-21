@@ -5,8 +5,8 @@ class PrimaryEnergy
   setup: () ->
     $('#energy_container').empty()
     document.getElementById("display_table").style.width = "10%"
-    document.getElementById("results").style.width = "75%"
-    document.getElementById("warning").style.width = "13%"
+    document.getElementById("results").style.width = "60%"
+    document.getElementById("warning").style.width = "25%"
     $('#results').append("<div id='energy_container'></div>")
     target = $('#energy_container')
     target.append("<div id='demand_chart' class='all_energy_chart'></div>")
@@ -404,7 +404,8 @@ class PrimaryEnergy
     @primary_energy_chart.redraw()
 
 
-    document.getElementById("warning").innerHTML = "<p>This scenario is over generating <b>" + @pathway['electricity']['overgeneration']['Overgeneration'][7] + " TWh </b> of electricity in 2050. You may want to dial back your supply options for minimizing this value</p>"
+    $("#warning").html("<p>This scenario is over generating <b>" + @pathway['electricity']['overgeneration']['Overgeneration'][7] + " TWh </b> of electricity in 2050. You may want to dial back your supply options for minimizing this value</p>
+                        <p>The Total Supply line shows energy available to the state after accounting for exports of electricity. In case of supply deficit, the model assumed coal based electricity generation to fulfill demand. Further the primary fuels coal, gas and oil are modelled to be equal to the demand, as they are not state controlled subjects.</p>")
 
 
 window.twentyfifty.views['primary_energy_chart'] = new PrimaryEnergy
