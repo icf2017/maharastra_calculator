@@ -10,10 +10,10 @@ class LandUse
 
   constructor: () ->
 
-  html = "<p>Karnataka's Land Area <br> <b></b></p>"
+  html = ""
 
   setup: () ->
-    document.getElementById("results").style.width = "75%"
+    document.getElementById("results").style.width = "100%"
     target = $('#results')
 
     target.append("<div id='land_use' class='chart'></div>")
@@ -24,9 +24,9 @@ class LandUse
 
     document.getElementById("pathway_box").style.display = "block"
     document.getElementById("classic_controls").style.display = "block"
-    document.getElementById("land_use").style.width = "55%"
-    document.getElementById("land_map").style.width = "24%"
-    document.getElementById("land_share").style.width = "15%"
+    document.getElementById("land_use").style.width = "50%"
+    document.getElementById("land_map").style.width = "20%"
+    document.getElementById("land_share").style.width = "25%"
     document.getElementById("warning").style.display = "none"
     $('#land_share').append(LandShare)
     $('#warning').empty()

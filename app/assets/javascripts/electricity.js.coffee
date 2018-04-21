@@ -324,7 +324,7 @@ class Electricity
       "Electricity Balancing Requirement", "Fossil Fuel Based Electricity", "Hydro and Nuclear",
       "Renewable Based Electricity", "Electricity imports"]
 
-    titles_supply = ["Gas Power Stations", "Coal power stations", "CCS", "Electricity for Balancing", "Fossil Fuel",
+    titles_supply = ["Gas Power Stations", "Coal power stations", "CCS", "Electricity for Balancing",
       "Hydro and Nuclear", "Renewable", "Electricity imports"]
 
     i = 0

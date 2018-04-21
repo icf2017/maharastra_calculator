@@ -226,7 +226,7 @@ class ModelResult < ModelUtilities
 
   def increamental_table
     inc = {} 
-    j = 2017
+    j = 2020
     ('ak'..'aq').each do |num| 
     inc[j] = []
       (304..311).each do |row|
