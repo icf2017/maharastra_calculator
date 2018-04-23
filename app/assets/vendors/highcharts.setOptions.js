@@ -19,12 +19,10 @@ Highcharts.setOptions({
     //spacingLeft: 3,
     //spacingRight: 5,
     margin: [45, 0, 16, 60],
-      //margin: [45, 0, 20, 35],
-    //margin: [45, 0, 150, 35],
-    style:  { fontFamily: 'sans-serif' }
+    style: {fontFamily: 'sans-serif'}
   },
-  title: { /*margin: 5*/ },
-  credits: { enabled: false },
+  title: {/*margin: 5*/},
+  credits: {enabled: false},
   legend: {
     enabled: false,
     //layout: 'vertical',
@@ -37,39 +35,53 @@ Highcharts.setOptions({
 
 
   xAxis: {
-    categories: [2015,2020,2025,2030,2035,2040,2045,2050],
+    categories: [2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050],
     tickWidth: 0,
-    title: { enabled: false },
+    title: {enabled: false},
     labels: {
-      formatter: function() {
-        switch(this.value) {
-          case 2015: return 2015; break;
-          case 2020: return 2020; break;
-          case 2025: return 2025; break;
-          case 2030: return 2030; break;
-          case 2035: return 2035; break;
-          case 2040: return 2040; break;
-          case 2045: return 2045; break;
-          case 2050: return 2050; break;
+      formatter: function () {
+        switch (this.value) {
+          case 2015:
+            return 2015;
+            break;
+          case 2020:
+            return 2020;
+            break;
+          case 2025:
+            return 2025;
+            break;
+          case 2030:
+            return 2030;
+            break;
+          case 2035:
+            return 2035;
+            break;
+          case 2040:
+            return 2040;
+            break;
+          case 2045:
+            return 2045;
+            break;
+          case 2050:
+            return 2050;
+            break;
         }
       },
-      style:{
+      style: {
         color: '#000'
       },
-      align: 'right',
+      align: 'right'
     }
   },
   yAxis: {
     labels: {
-      style:{
+      style: {
         color: '#000'
       },
-      formatter: function() {
+      formatter: function () {
         return this.value / 1;
-      },
-
-    },
-
+      }
+    }
   },
 
   plotOptions: {

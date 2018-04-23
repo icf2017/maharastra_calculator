@@ -25,7 +25,7 @@ class PrimaryEnergy
     document.getElementById("results").style.overflow = "inherit"
 
     @final_energy_chart = new Highcharts.Chart({
-      chart: {renderTo: 'demand_chart', height: 250},
+      chart: {renderTo: 'demand_chart', height: 300, width: 350},
       title: {text: 'Energy Demand'},
       yAxis: {
         labels:
@@ -109,7 +109,7 @@ class PrimaryEnergy
       series: []
     })
     @primary_energy_chart = new Highcharts.Chart({
-      chart: {renderTo: 'supply_chart', height: 250, width: 400},
+      chart: {renderTo: 'supply_chart', height: 300, width: 350},
       title: {text: 'Energy Supply'},
       tooltip: {
         enabled: true,

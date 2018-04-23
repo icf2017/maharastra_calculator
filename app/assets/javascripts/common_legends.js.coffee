@@ -44,19 +44,23 @@ highData = (n, series, hide, name) ->
     if name != 'Grid'
       Ddata = [
         Highcharts.numberFormat(series.yData[0], 0, ",")
+        Highcharts.numberFormat(series.yData[1], 0, ",")
+        Highcharts.numberFormat(series.yData[2], 0, ",")
         Highcharts.numberFormat(series.yData[3], 0, ",")
+        Highcharts.numberFormat(series.yData[4], 0, ",")
         Highcharts.numberFormat(series.yData[5], 0, ",")
+        Highcharts.numberFormat(series.yData[6], 0, ",")
         Highcharts.numberFormat(series.yData[7], 0, ",")
       ]
 
       i = 0
-      while i < 4
+      while i < 8
         $("#display-data" + n + " #SeriesData" + i).html Ddata[i]
         i++
   else
     i = 0
 
-    while i < 4
+    while i < 8
       $("#display-data" + n + " #SeriesData" + i).empty()
       i++
     $("#display-data" + n + " #SeriesName").empty()
