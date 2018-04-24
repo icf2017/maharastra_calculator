@@ -66,7 +66,8 @@ class ModelChoice
     48 => 'Telecom_One-pager',
     50 => 'T&D losses',
     51 => 'Electrical Energy Storage',
-    52 => 'Reliability of the Grid'
+    52 => 'Reliability of the Grid',
+    54 => 'Temperature Stress'
   }
 
   def doc

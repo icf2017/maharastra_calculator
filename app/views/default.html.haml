@@ -64,8 +64,11 @@
             <h2 data-step="1" data-intro="This is a tooltip!">Demand</h2>
             %table
               %table
-                = classic_table_row_for_choice structure.choices[24]
-                <tr height='10'><td></td></tr>
+                - choiceArr = [24]
+                = classic_table_row_for_heading 'Growth of the Economy', 0, choiceArr, false
+                %table#collapseme0.collapse.out
+                  = classic_table_row_for_choice structure.choices[45]
+                  <tr height='10'><td></td></tr>
               /- structure.choices[25..42].each do |choice|
               - choiceArr = {}
               - choiceArr = [25,26,27,28,29,30]
@@ -83,10 +86,10 @@
                   = classic_table_row_for_choice structure.choices[choice]
                 <tr height='10'><td></td></tr>
 
-              - choiceArr = [46,31,32,33,34,35]
+              - choiceArr = [45,31,32,33,34,35]
               = classic_table_row_for_heading 'Buildings',3, choiceArr, false
               %table#collapseme3.collapse.out
-                - [46,31,32,33,34,35].each do |choice|
+                - [45,31,32,33,34,35].each do |choice|
                   = classic_table_row_for_choice structure.choices[choice]
                 <tr height='10'><td></td></tr>
 
@@ -110,10 +113,10 @@
               /- [7,8,12,13, 9,10, 5,  6,11,  15,16,17,18,  19, 20].each do |choice|
 
               - choiceArr = {}
-              - choiceArr = [7,8,12,13]
+              - choiceArr = [7,12,13]
               = classic_table_row_for_heading 'Solar',7, choiceArr, true
               %table#collapseme7.collapse.out
-                - [7,8,12,13].each do |choice|
+                - [7,12,13].each do |choice|
                   = classic_table_row_for_choice structure.choices[choice]
                 <tr height='10'><td></td></tr>
 
@@ -166,24 +169,17 @@
               /- [21,0, 22,1,2, 23,  3,4].each do |choice|
 
               - choiceArr = {}
-              - choiceArr = [21,0]
+              - choiceArr = [0]
               = classic_table_row_for_heading 'Gas',14, choiceArr, false
               %table#collapseme14.collapse.out
-                - [21,0].each do |choice|
+                - [0].each do |choice|
                   = classic_table_row_for_choice structure.choices[choice]
                 <tr height='10'><td></td></tr>
 
-              - choiceArr = [22,1,2]
+              - choiceArr = [1,2]
               = classic_table_row_for_heading 'Coal',15, choiceArr, false
               %table#collapseme15.collapse.out
-                - [22,1,2].each do |choice|
-                  = classic_table_row_for_choice structure.choices[choice]
-                <tr height='10'><td></td></tr>
-
-              - choiceArr = [23]
-              = classic_table_row_for_heading 'Oil',16, choiceArr, false
-              %table#collapseme16.collapse.out
-                - [23].each do |choice|
+                - [1,2].each do |choice|
                   = classic_table_row_for_choice structure.choices[choice]
                 <tr height='10'><td></td></tr>
 
@@ -239,33 +235,20 @@
               /- structure.choices[0..37].each do |choice|
               /- [14,  43, 44, 45].each do |choice|
 
-              - choiceArr = [14]
-              = classic_table_row_for_heading 'Cross Border Electricity Trade',18, choiceArr, true
-              %table#collapseme18.collapse.out
-                - [14].each do |choice|
+              - choiceArr = [42]
+              = classic_table_row_for_heading 'T&D Losses',19, choiceArr, false
+              %table#collapseme19.collapse.out
+                - [42].each do |choice|
                   = classic_table_row_for_choice structure.choices[choice]
                 <tr height='10'><td></td></tr>
 
               - choiceArr = [43]
-              = classic_table_row_for_heading 'T&D Losses',19, choiceArr, false
-              %table#collapseme19.collapse.out
+              = classic_table_row_for_heading 'Storage',20, choiceArr, true
+              %table#collapseme20.collapse.out
                 - [43].each do |choice|
                   = classic_table_row_for_choice structure.choices[choice]
                 <tr height='10'><td></td></tr>
 
-              - choiceArr = [44]
-              = classic_table_row_for_heading 'Storage',20, choiceArr, true
-              %table#collapseme20.collapse.out
-                - [44].each do |choice|
-                  = classic_table_row_for_choice structure.choices[choice]
-                <tr height='10'><td></td></tr>
-
-              - choiceArr = [45]
-              = classic_table_row_for_heading 'Reliability of Grid',21, choiceArr, false
-              %table#collapseme21.collapse.out
-                - [45].each do |choice|
-                  = classic_table_row_for_choice structure.choices[choice]
-                <tr height='10'><td></td></tr>
         .clearfix
       #tooltip
       .clearfix

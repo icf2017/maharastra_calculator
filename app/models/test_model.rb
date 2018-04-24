@@ -3711,10 +3711,10 @@ class TestModel < Minitest::Unit::TestCase
   def test_charts_d347; assert_in_epsilon(4.52, worksheet.charts_d347, 0.002); end
   def test_charts_e347; assert_in_epsilon(4.44, worksheet.charts_e347, 0.002); end
   def test_charts_f347; assert_in_epsilon(4.37, worksheet.charts_f347, 0.002); end
-  def test_charts_g347; assert_in_epsilon(4.0, worksheet.charts_g347, 0.002); end
-  def test_charts_h347; assert_in_epsilon(4.0, worksheet.charts_h347, 0.002); end
-  def test_charts_i347; assert_in_epsilon(4.0, worksheet.charts_i347, 0.002); end
-  def test_charts_j347; assert_in_epsilon(4.0, worksheet.charts_j347, 0.002); end
+  def test_charts_g347; assert_in_epsilon(4.29, worksheet.charts_g347, 0.002); end
+  def test_charts_h347; assert_in_epsilon(4.22, worksheet.charts_h347, 0.002); end
+  def test_charts_i347; assert_in_epsilon(4.15, worksheet.charts_i347, 0.002); end
+  def test_charts_j347; assert_in_epsilon(4.07, worksheet.charts_j347, 0.002); end
   def test_charts_k347; assert_in_epsilon(4.0, worksheet.charts_k347, 0.002); end
   def test_charts_b348; assert_equal("Urban Population", worksheet.charts_b348.to_s.gsub(/[\n\r]+/,'')); end
   def test_charts_c348; assert_equal("Million", worksheet.charts_c348.to_s.gsub(/[\n\r]+/,'')); end
