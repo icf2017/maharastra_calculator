@@ -36,13 +36,13 @@ class ModelChoice
     18 => 'Biomass Residue End Use Application',
     19 => 'First and Second Generation Biofuel Production',
     20 => 'Biofuel Production from Algae',
-    21 => 'Municipal Solid Waste',
+    21 => 'Energy from Waste',
     22 => 'Hydrogen Production for Transport',
     23 => 'Domestic Gas Production',
     24 => 'Coal Production',
     25 => 'Domestic Oil Production',
     26 => 24, #Not used
-    27 => 'GDP Scenarios',
+    27 => 'Growth of the Economy.pdf',
     28 => 'Shift to Public Transport',
     29 => 'Passenger Transport Demand', #No pdf
     30 => 'Passenger Transport Mode', #No pdf
@@ -50,7 +50,7 @@ class ModelChoice
     32 => 'Electric and Fuel Cell Vehicles',
     33 => 'Electric and Fuel Cell Vehicles',
     34 => 'Freight Transport Demand',
-    35 => 'Freight Transport Demand Mode',
+    35 => 'Freight Transport Mode',
     36 => 'Urban Planning',
     37 => 'Penetration of Energy Efficient Envelope',
     38 => 'Efficiency of Lighting and Appliances',
@@ -64,7 +64,7 @@ class ModelChoice
     46 => 'Energy Demand for Pumps and Tractors',
     47 => 'Choice of fuel for irrigation',
     48 => 'Telecom_One-pager',
-    50 => 'T&D losses',
+    50 => 'T&D Losses',
     51 => 'Energy and Power Storage',
     52 => 'Reliability of the Grid',
     54 => 'Temperature Stress'
