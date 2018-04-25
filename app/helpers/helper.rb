@@ -66,7 +66,7 @@ module Helper
       row << "<td width='20px'></td>"
     end
     choice.levels.each.with_index do |level, i|
-      if choice.number == 27 or choice.number == 42 or choice.number == 43 or choice.number == 47 or choice.number == 5
+      if [5, 27, 42, 43, 47, 54].include?(choice.number)
         if level == 1
           row << "<td class='choice'><a href='#' data-choicenumber='#{choice.number}' data-choicelevel='#{i + 1}' id='c#{choice.number}l#{i + 1}' title='#{choice.descriptions[i]}' class='choiceLink' >A</a></td>"
         end
