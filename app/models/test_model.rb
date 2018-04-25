@@ -142,7 +142,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_j26; assert_equal("A faster growth with installed capacity reaching 345 MW in 2050.", worksheet.control_j26.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_k26; assert_equal("Assumes a highly optimistic scenario where installed capacity reaches to 430 MW by 2050.", worksheet.control_k26.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_m26; assert_equal("The capacity of WtE projects was zero in 2015.", worksheet.control_m26.to_s.gsub(/[\n\r]+/,'')); end
-  def test_control_d27; assert_equal("Hydrogen Production for Telecom and Transport ", worksheet.control_d27.to_s.gsub(/[\n\r]+/,'')); end
+  def test_control_d27; assert_equal("Hydrogen Production for Transport ", worksheet.control_d27.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_f27; assert_in_epsilon(4.0, worksheet.control_f27, 0.002); end
   def test_control_h27; assert_equal("95% of the required Hydrogen is produced from coal reforming and remaining 5 % from gas reforming in 2050.", worksheet.control_h27.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_i27; assert_equal("60% of the required hydrogen from Gas reforming, 30% by Coal gasification and 10 % by electrolysis in 2050.", worksheet.control_i27.to_s.gsub(/[\n\r]+/,'')); end
@@ -182,7 +182,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_j36; assert_equal("Share of public and private transport is 70% and 30% respectively in 2050.", worksheet.control_j36.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_k36; assert_equal("Share of public and private transport is 80% and 20% respectively in 2050.", worksheet.control_k36.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_m36; assert_equal("Share of public and private transport is 60% and 40% respectively in 2015.", worksheet.control_m36.to_s.gsub(/[\n\r]+/,'')); end
-  def test_control_d37; assert_equal("Electric and Fuel Cell Vehicles", worksheet.control_d37.to_s.gsub(/[\n\r]+/,'')); end
+  def test_control_d37; assert_equal("Electric, LNG and Fuel Cell Vehicles", worksheet.control_d37.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_f37; assert_in_epsilon(4.0, worksheet.control_f37, 0.002); end
   def test_control_h37; assert_equal("Assumes a slow but rising share of EV penetration for 2W-31%, 3W-45%, taxis-40%, cars-30% and buses-55%. Share of FCVs in cars is almost zero in 2050", worksheet.control_h37.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_i37; assert_equal("Assumes a favourable scenario for EV penetration, share of cars-71% , 2W-47%, 3W-70%, taxis-98% and buses-77% in 2050. Share of FCV\u2019s in cars is 2% in 2050.", worksheet.control_i37.to_s.gsub(/[\n\r]+/,'')); end
@@ -3711,10 +3711,10 @@ class TestModel < Minitest::Unit::TestCase
   def test_charts_d347; assert_in_epsilon(4.52, worksheet.charts_d347, 0.002); end
   def test_charts_e347; assert_in_epsilon(4.44, worksheet.charts_e347, 0.002); end
   def test_charts_f347; assert_in_epsilon(4.37, worksheet.charts_f347, 0.002); end
-  def test_charts_g347; assert_in_epsilon(4.29, worksheet.charts_g347, 0.002); end
-  def test_charts_h347; assert_in_epsilon(4.22, worksheet.charts_h347, 0.002); end
-  def test_charts_i347; assert_in_epsilon(4.15, worksheet.charts_i347, 0.002); end
-  def test_charts_j347; assert_in_epsilon(4.07, worksheet.charts_j347, 0.002); end
+  def test_charts_g347; assert_in_epsilon(4.0, worksheet.charts_g347, 0.002); end
+  def test_charts_h347; assert_in_epsilon(4.0, worksheet.charts_h347, 0.002); end
+  def test_charts_i347; assert_in_epsilon(4.0, worksheet.charts_i347, 0.002); end
+  def test_charts_j347; assert_in_epsilon(4.0, worksheet.charts_j347, 0.002); end
   def test_charts_k347; assert_in_epsilon(4.0, worksheet.charts_k347, 0.002); end
   def test_charts_b348; assert_equal("Urban Population", worksheet.charts_b348.to_s.gsub(/[\n\r]+/,'')); end
   def test_charts_c348; assert_equal("Million", worksheet.charts_c348.to_s.gsub(/[\n\r]+/,'')); end
