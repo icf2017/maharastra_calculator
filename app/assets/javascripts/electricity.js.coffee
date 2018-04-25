@@ -226,8 +226,9 @@ class Electricity
           text: "TWh/yr"
         },
         reversed: false,
+        width: 225
       },
-      xAxis: {width: 240},
+      xAxis: {width: 255},
       legend: {
         itemStyle: {fontSize: '7pt'}
       },

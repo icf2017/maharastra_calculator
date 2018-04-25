@@ -64,11 +64,11 @@
             <h2 data-step="1" data-intro="This is a tooltip!">Demand</h2>
             %table
               %table
-                - choiceArr = [24]
-                = classic_table_row_for_heading 'Growth of the Economy', 0, choiceArr, false
-                %table#collapseme0.collapse.out
-                  = classic_table_row_for_choice structure.choices[45]
-                  <tr height='10'><td></td></tr>
+                = classic_table_row_for_choice structure.choices[24]
+                <tr height='10'><td></td></tr>
+                = classic_table_row_for_choice structure.choices[45]
+                <tr height='10'><td></td></tr>
+
               /- structure.choices[25..42].each do |choice|
               - choiceArr = {}
               - choiceArr = [25,26,27,28,29,30]
