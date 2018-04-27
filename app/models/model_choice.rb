@@ -62,7 +62,7 @@ class ModelChoice
     44 => 'Fuel Shift and Cookstove Efficiency',
     45 => "Choice of fuel for irrigationpdf",
     46 => 'Energy Demand for Pumps and Tractors',
-    47 => 'Choice of fuel for irrigation',
+    47 => 'Fuel Split for Pumps',
     48 => 'Telecom_One-pager',
     50 => 'T&D Losses',
     51 => 'Energy and Power Storage',

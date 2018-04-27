@@ -401,8 +401,8 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_o44; assert_in_epsilon(4.0, worksheet.control_o44, 0.002); end
   def test_control_o45; assert_in_epsilon(4.0, worksheet.control_o45, 0.002); end
   def test_control_o46; assert_in_epsilon(4.0, worksheet.control_o46, 0.002); end
-  def test_control_o47; assert_in_epsilon(4.0, worksheet.control_o47, 0.002); end
-  def test_control_o48; assert_in_epsilon(4.0, worksheet.control_o48, 0.002); end
+  def test_control_o47; assert_in_delta(1.0, worksheet.control_o47, 0.002); end
+  def test_control_o48; assert_in_delta(1.0, worksheet.control_o48, 0.002); end
   def test_control_o49; assert_in_epsilon(4.0, worksheet.control_o49, 0.002); end
   def test_control_o50; assert_in_delta(0.0, (worksheet.control_o50||0), 0.002); end
   def test_control_o51; assert_in_epsilon(4.0, worksheet.control_o51, 0.002); end
@@ -457,8 +457,8 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_p44; assert_in_epsilon(3.0, worksheet.control_p44, 0.002); end
   def test_control_p45; assert_in_epsilon(3.0, worksheet.control_p45, 0.002); end
   def test_control_p46; assert_in_epsilon(3.0, worksheet.control_p46, 0.002); end
-  def test_control_p47; assert_in_epsilon(3.0, worksheet.control_p47, 0.002); end
-  def test_control_p48; assert_in_epsilon(3.0, worksheet.control_p48, 0.002); end
+  def test_control_p47; assert_in_delta(1.0, worksheet.control_p47, 0.002); end
+  def test_control_p48; assert_in_delta(1.0, worksheet.control_p48, 0.002); end
   def test_control_p49; assert_in_epsilon(3.0, worksheet.control_p49, 0.002); end
   def test_control_p50; assert_in_delta(0.0, (worksheet.control_p50||0), 0.002); end
   def test_control_p51; assert_in_epsilon(3.0, worksheet.control_p51, 0.002); end
@@ -513,8 +513,8 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_q44; assert_in_epsilon(2.0, worksheet.control_q44, 0.002); end
   def test_control_q45; assert_in_epsilon(2.0, worksheet.control_q45, 0.002); end
   def test_control_q46; assert_in_epsilon(2.0, worksheet.control_q46, 0.002); end
-  def test_control_q47; assert_in_epsilon(2.0, worksheet.control_q47, 0.002); end
-  def test_control_q48; assert_in_epsilon(2.0, worksheet.control_q48, 0.002); end
+  def test_control_q47; assert_in_delta(1.0, worksheet.control_q47, 0.002); end
+  def test_control_q48; assert_in_delta(1.0, worksheet.control_q48, 0.002); end
   def test_control_q49; assert_in_epsilon(2.0, worksheet.control_q49, 0.002); end
   def test_control_q50; assert_in_delta(0.0, (worksheet.control_q50||0), 0.002); end
   def test_control_q51; assert_in_epsilon(2.0, worksheet.control_q51, 0.002); end
