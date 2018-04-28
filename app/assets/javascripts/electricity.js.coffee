@@ -23,7 +23,7 @@ class Electricity
     document.getElementById("results").style.overflow = "inherit"
 
     @demand_chart = new Highcharts.Chart({
-      chart: {renderTo: 'demand_chart', height: 250, width: 300},
+      chart: {renderTo: 'demand_chart', height: 250, width: 295},
       title: {text: 'Electricity demand'},
       tooltip: {
         enabled: true,
@@ -57,7 +57,7 @@ class Electricity
         max: 1000,
         width: 225
       },
-      xAxis: {width: 255},
+      xAxis: {width: 250},
       legend: {
         itemStyle: {fontSize: '7pt'}
       },
@@ -109,7 +109,7 @@ class Electricity
     })
 
     @supply_chart = new Highcharts.Chart({
-      chart: {renderTo: 'supply_chart', height: 250, width: 300},
+      chart: {renderTo: 'supply_chart', height: 250, width: 295},
       title: {text: 'Electricity supply'},
       tooltip: {
         enabled: true,
@@ -143,7 +143,7 @@ class Electricity
         max: 1000,
         width: 225
       },
-      xAxis: {width: 255},
+      xAxis: {width: 250},
       legend: {
         itemStyle: {fontSize: '7pt'}
       },
@@ -195,7 +195,7 @@ class Electricity
     })
 
     @electricity_overgeneration = new Highcharts.Chart({
-      chart: {renderTo: 'electricity_overgeneration', height: 250, width: 300, type: 'line'},
+      chart: {renderTo: 'electricity_overgeneration', height: 250, width: 295, type: 'line'},
       title: {text: 'Over-generation / Exports'},
       tooltip: {
         enabled: true,
@@ -228,7 +228,7 @@ class Electricity
         reversed: false,
         width: 225
       },
-      xAxis: {width: 255},
+      xAxis: {width: 250},
       legend: {
         itemStyle: {fontSize: '7pt'}
       },
