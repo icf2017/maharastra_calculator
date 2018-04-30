@@ -89,6 +89,27 @@ module Helper
     "<tr class='#{choice.incremental_or_alternative}' id='r#{choice.number}'>#{row.join('')}<td class='choice' id='d#{choice.number}'></td></tr>"
   end
 
+  def generate_link(choice)
+    if choice.descriptions[5].empty?
+      "<a> #{choice.name} </a>"
+    else
+      title = choice.descriptions[5].gsub(/'/,"\'")
+      "<a href='/assets/onepage/#{choice.doc}'
+          title='#{title}'
+         onmouseover='twentyfifty.startDemo(#{choice.number}); return true;'
+         onmouseout='twentyfifty.stopDemo(#{choice.number});return true;' >
+        #{choice.name}
+      </a>"
+    end
+    "<a
+       target='_new'
+       title='#{choice.descriptions[5]}'
+       onmouseover='twentyfifty.startDemo(#{choice.number}); return true;'
+       onmouseout='twentyfifty.stopDemo(#{choice.number});return true;'>
+    #{choice.name}
+    </a>"
+  end
+
   def view_names
     {
       "primary_energy_chart" => "All Energy",
