@@ -326,7 +326,7 @@ class Electricity
 
 
     titles = ["Gas Power Stations", "Coal power stations", "Carbon Capture Storage (CCS)",
-      "Electricity Balancing Requirement", "Fossil Fuel Based Electricity", "Hydro and Nuclear",
+      "Electricity Balancing Requirement", "Hydro and Nuclear",
       "Renewable Based Electricity", "Electricity imports"]
 
     titles_supply = ["Gas Power Stations", "Coal power stations", "CCS", "Electricity for Balancing",
