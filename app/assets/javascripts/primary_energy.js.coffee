@@ -273,7 +273,7 @@ class PrimaryEnergy
     else
       @primary_energy_chart.addSeries({
         type: 'line',
-        name: 'Determined Effort',
+        name: 'Total supply used in state - Determined Effort',
         data: data,
         lineColor: '#FF0000',
         color: '#FF0000',
@@ -289,7 +289,7 @@ class PrimaryEnergy
     else
       @primary_energy_chart.addSeries({
         type: 'line',
-        name: 'Total supply',
+        name: 'Total supply used in state - Your pathway',
         data: data,
         lineColor: '#000',
         color: '#000',
