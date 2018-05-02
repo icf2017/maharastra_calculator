@@ -301,20 +301,6 @@ updateControls = (old_choices, @choices) ->
 
       for c in [1..(choice_whole - 1)]
         controls.find("#c#{i}l#{c}").addClass("level#{choice_whole}")
-      #controls.find("#c#{i}l#{c}").text(c)
-      #if i is 27 or i is 42 or i is 43
-      #  if choice is 1
-      #    controls.find("#d#{i}").text('A')
-      #  if choice is 2
-      #    controls.find("#d#{i}").text('B')
-      #  if choice is 3
-      #    controls.find("#d#{i}").text('C')
-      #  if choice is 4
-      #    controls.find("#d#{i}").text('D')
-      #  if choice is 5
-      #    controls.find("#d#{i}").text('E')
-      #else
-      #  controls.find("#d#{i}").text(choice)
 
       #####  SHOW CHANGS ON MASTER GROUP LEVER
       for x in [1..(choice_whole)]

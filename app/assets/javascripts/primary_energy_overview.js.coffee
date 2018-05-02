@@ -261,7 +261,7 @@ class PrimaryEnergyOverview
                   return
 
           dataLabels:
-            distance: 12
+            distance: 10
             enabled: true
             color: "#000000"
             connectorColor: "#000000"
@@ -324,7 +324,7 @@ class PrimaryEnergyOverview
 
           drillBioenergy = {name:"Bioenergy", id:"Bioenergy",data:[["Agriculture",data['supply_year'][Syear][12][1]],["Biomass oversupply (imports)",data['supply_year'][Syear][13][1]],["Waste",data['supply_year'][Syear][11][1]]], type:'pie'}
 
-          drillRenewables = {name:"Renewables and Clean Energy", id:"Renewables and Clean Energy",data:[["Nuclear",data['supply_year'][Syear][0][1]],["Solar",data['supply_year'][Syear][1][1]],["Wind",data['supply_year'][Syear][2][1]],["Hydro",data['supply_year'][Syear][6][1]]], type:'pie'}
+          drillRenewables = {name:"Renewables & Clean Energy", id:"Renewables & Clean Energy",data:[["Nuclear",data['supply_year'][Syear][0][1]],["Solar",data['supply_year'][Syear][1][1]],["Wind",data['supply_year'][Syear][2][1]],["Hydro",data['supply_year'][Syear][6][1]]], type:'pie'}
 
           drillCoal = {name:"Coal", id:"Coal",data:[["Coal Imports",data['supply_year'][Syear][15][1]],["Coal Production",data['supply_year'][Syear][16][1]]], type:'pie'}
 
@@ -332,7 +332,7 @@ class PrimaryEnergyOverview
 
           drillGas = {name:"Natural gas", id:"Natural gas",data:[["Gas Imports",data['supply_year'][Syear][21][1]],["Gas Production",data['supply_year'][Syear][22][1]]], type:'pie'}
 
-          data_in = [{name:"Bioenergy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:data['supply_year'][Syear][14][1], drilldown: drillBioenergy}, {name: "Cross Border Electricity Trade", y:data['supply_year'][Syear][7][1]},{name:"Coal", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:data['supply_year'][Syear][17][1], drilldown: drillCoal},{name:"Renewables and Clean Energy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:data['supply_year'][Syear][8][1], drilldown: drillRenewables},{name:"Oil",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:data['supply_year'][Syear][20][1], drilldown: drillOil},{name:"Natural gas", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:data['supply_year'][Syear][23][1], drilldown: drillGas}]
+          data_in = [{name:"Bioenergy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:data['supply_year'][Syear][14][1], drilldown: drillBioenergy}, {name: "Cross Border Electricity Trade", y:data['supply_year'][Syear][7][1]},{name:"Coal", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:data['supply_year'][Syear][17][1], drilldown: drillCoal},{name:"Renewables & Clean Energy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:data['supply_year'][Syear][8][1], drilldown: drillRenewables},{name:"Oil",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:data['supply_year'][Syear][20][1], drilldown: drillOil},{name:"Natural gas", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:data['supply_year'][Syear][23][1], drilldown: drillGas}]
 
 
 
@@ -385,7 +385,7 @@ class PrimaryEnergyOverview
 
     drillBioenergy = {name:"Bioenergy", id:"Bioenergy",data:[["Agriculture",@pathway['supply_year'][2050][12][1]],["Biomass oversupply (imports)",@pathway['supply_year'][2050][13][1]],["Waste",@pathway['supply_year'][2050][11][1]]], type:'pie'}
 
-    drillRenewables = {name:"Renewables and Clean Energy", id:"Renewables and Clean Energy",data:[["Nuclear",@pathway['supply_year'][2050][0][1]],["Solar",@pathway['supply_year'][2050][1][1]],["Wind",@pathway['supply_year'][2050][2][1]],["Hydro",@pathway['supply_year'][2050][6][1]]], type:'pie'}
+    drillRenewables = {name:"Renewables & Clean Energy", id:"Renewables & Clean Energy",data:[["Nuclear",@pathway['supply_year'][2050][0][1]],["Solar",@pathway['supply_year'][2050][1][1]],["Wind",@pathway['supply_year'][2050][2][1]],["Hydro",@pathway['supply_year'][2050][6][1]]], type:'pie'}
 
     drillCoal = {name:"Coal", id:"Coal",data:[["Coal Imports",@pathway['supply_year'][2050][15][1]],["Coal Production",@pathway['supply_year'][2050][16][1]]], type:'pie'}
 
@@ -396,7 +396,7 @@ class PrimaryEnergyOverview
 
     i = 0
 
-    data = [{name:"Bioenergy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['supply_year'][2050][14][1], drilldown: drillBioenergy}, {name: "Cross Border Electricity Trade", y:@pathway['supply_year'][2050][7][1]},{name:"Coal", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2050][17][1], drilldown: drillCoal},{name:"Renewables and Clean Energy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2050][8][1], drilldown: drillRenewables},{name:"Oil",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['supply_year'][2050][20][1], drilldown: drillOil},{name:"Natural gas", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2050][23][1], drilldown: drillGas}]
+    data = [{name:"Bioenergy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['supply_year'][2050][14][1], drilldown: drillBioenergy}, {name: "Cross Border Electricity Trade", y:@pathway['supply_year'][2050][7][1]},{name:"Coal", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2050][17][1], drilldown: drillCoal},{name:"Renewables & Clean Energy",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2050][8][1], drilldown: drillRenewables},{name:"Oil",dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}},y:@pathway['supply_year'][2050][20][1], drilldown: drillOil},{name:"Natural gas", dataLabels: {style:{fontWeight: 'bold',textDecoration: 'underline'}}, y:@pathway['supply_year'][2050][23][1], drilldown: drillGas}]
 
     
     if @energy_supply_chart.series[i]?

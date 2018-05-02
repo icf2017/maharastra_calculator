@@ -358,6 +358,10 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_n57; assert_in_delta(1.0, worksheet.control_n57, 0.002); end
   def test_control_n58; assert_in_delta(0.0, (worksheet.control_n58||0), 0.002); end
   def test_control_n59; assert_in_epsilon(2.0, worksheet.control_n59, 0.002); end
+  def test_control_n60; assert_in_epsilon(2.0, worksheet.control_n60, 0.002); end
+  def test_control_n61; assert_in_epsilon(2.0, worksheet.control_n61, 0.002); end
+  def test_control_n62; assert_in_epsilon(2.0, worksheet.control_n62, 0.002); end
+  def test_control_n63; assert_in_epsilon(2.0, worksheet.control_n63, 0.002); end
   def test_control_o4; assert_equal("Heroic Effort Scenario (All Level 4s)", worksheet.control_o4.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_o5; assert_in_epsilon(4.0, worksheet.control_o5, 0.002); end
   def test_control_o6; assert_in_epsilon(4.0, worksheet.control_o6, 0.002); end
@@ -414,6 +418,10 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_o57; assert_in_epsilon(4.0, worksheet.control_o57, 0.002); end
   def test_control_o58; assert_in_delta(0.0, (worksheet.control_o58||0), 0.002); end
   def test_control_o59; assert_in_epsilon(2.0, worksheet.control_o59, 0.002); end
+  def test_control_o60; assert_in_epsilon(2.0, worksheet.control_o60, 0.002); end
+  def test_control_o61; assert_in_epsilon(2.0, worksheet.control_o61, 0.002); end
+  def test_control_o62; assert_in_epsilon(2.0, worksheet.control_o62, 0.002); end
+  def test_control_o63; assert_in_epsilon(2.0, worksheet.control_o63, 0.002); end
   def test_control_p4; assert_equal("Aggressive Effort Scenario (All Level 3s)", worksheet.control_p4.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_p5; assert_in_epsilon(3.0, worksheet.control_p5, 0.002); end
   def test_control_p6; assert_in_epsilon(3.0, worksheet.control_p6, 0.002); end
@@ -470,6 +478,10 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_p57; assert_in_epsilon(3.0, worksheet.control_p57, 0.002); end
   def test_control_p58; assert_in_delta(0.0, (worksheet.control_p58||0), 0.002); end
   def test_control_p59; assert_in_epsilon(2.0, worksheet.control_p59, 0.002); end
+  def test_control_p60; assert_in_epsilon(2.0, worksheet.control_p60, 0.002); end
+  def test_control_p61; assert_in_epsilon(2.0, worksheet.control_p61, 0.002); end
+  def test_control_p62; assert_in_epsilon(2.0, worksheet.control_p62, 0.002); end
+  def test_control_p63; assert_in_epsilon(2.0, worksheet.control_p63, 0.002); end
   def test_control_q4; assert_equal("Determined Effort Scenario (All Level 2s)", worksheet.control_q4.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_q5; assert_in_epsilon(2.0, worksheet.control_q5, 0.002); end
   def test_control_q6; assert_in_epsilon(2.0, worksheet.control_q6, 0.002); end
@@ -526,6 +538,10 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_q57; assert_in_epsilon(2.0, worksheet.control_q57, 0.002); end
   def test_control_q58; assert_in_delta(0.0, (worksheet.control_q58||0), 0.002); end
   def test_control_q59; assert_in_epsilon(2.0, worksheet.control_q59, 0.002); end
+  def test_control_q60; assert_in_epsilon(2.0, worksheet.control_q60, 0.002); end
+  def test_control_q61; assert_in_epsilon(2.0, worksheet.control_q61, 0.002); end
+  def test_control_q62; assert_in_epsilon(2.0, worksheet.control_q62, 0.002); end
+  def test_control_q63; assert_in_epsilon(2.0, worksheet.control_q63, 0.002); end
   def test_control_s4; assert_equal("Renewable Energy and Least Emissions Pathway ", worksheet.control_s4.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_t4; assert_equal("Max Energy Security (Determined Effort in Demand Sectors)", worksheet.control_t4.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_u4; assert_equal("Default", worksheet.control_u4.to_s.gsub(/[\n\r]+/,'')); end
@@ -584,6 +600,10 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_u57; assert_in_epsilon(2.0, worksheet.control_u57, 0.002); end
   def test_control_u58; assert_in_delta(0.0, (worksheet.control_u58||0), 0.002); end
   def test_control_u59; assert_in_epsilon(2.0, worksheet.control_u59, 0.002); end
+  def test_control_u60; assert_in_epsilon(2.0, worksheet.control_u60, 0.002); end
+  def test_control_u61; assert_in_epsilon(2.0, worksheet.control_u61, 0.002); end
+  def test_control_u62; assert_in_epsilon(2.0, worksheet.control_u62, 0.002); end
+  def test_control_u63; assert_in_epsilon(2.0, worksheet.control_u63, 0.002); end
   def test_control_v4; assert_equal("Maximum RE and Electric Vehicle Pathway", worksheet.control_v4.to_s.gsub(/[\n\r]+/,'')); end
   def test_control_v5; assert_in_delta(1.0, worksheet.control_v5, 0.002); end
   def test_control_v6; assert_in_delta(1.0, worksheet.control_v6, 0.002); end

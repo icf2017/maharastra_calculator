@@ -102,7 +102,7 @@ class TotalCost
           textAlign: "left",
           x: 0,
           y: -15,
-          text: "INR Trillion"
+          text: "INR Billion"
         }  
 
 

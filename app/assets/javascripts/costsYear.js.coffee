@@ -104,7 +104,7 @@ class costsYear
         color: '#fff'
         height: 250, marginLeft:65, marginRight: 30
       },
-      title: { text: 'Differential Costs (INR Trillion) in the year ' },
+      title: { text: 'Differential Costs (INR Billion) in the year ' },
       subtitle: { text: ""},
       yAxis: { 
         labels: formatter: ->
@@ -232,7 +232,7 @@ class costsYear
 
       yAxis: {
         title: {
-          text:'Differential Cost (INR Trillion)',
+          text:'Differential Cost (INR Billion)',
           style: {
             fontSize: '10px',
             color: '#414141',

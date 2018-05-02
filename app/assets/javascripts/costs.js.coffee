@@ -33,7 +33,7 @@ class CostsNew
         marginRight: 30,
         marginLeft: 70
       },
-      title: { text: 'Cumulative Costs in INR Trillion' },
+      title: { text: 'Cumulative Costs in INR Billion' },
       subtitle: { text: ""},
       yAxis: { 
         labels: formatter: ->
