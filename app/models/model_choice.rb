@@ -42,7 +42,7 @@ class ModelChoice
     24 => 'Coal Production',
     25 => 'Domestic Oil Production',
     26 => 24, #Not used
-    27 => 'Growth of the Economy.pdf',
+    27 => 'Growth of the Economy',
     28 => 'Shift to Public Transport',
     29 => 'Passenger Transport Demand', #No pdf
     30 => 'Passenger Transport Mode', #No pdf
