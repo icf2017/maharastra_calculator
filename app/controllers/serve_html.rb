@@ -18,7 +18,7 @@ class ServeHTML < Sinatra::Base
     end
 
     get '/docs/Karnataka_energy_2050.xlsx' do
-      send_file File.join('app', 'models', 'model.xlsx'), :filename => 'Karnataka_energy_2050.xlsx', :type => 'Application/octet-stream'
+      send_file File.join(settings.root, '../models', 'model.xlsx'), :filename => 'Karnataka_energy_2050.xlsx', :type => 'Application/octet-stream'
     end
 
   else
