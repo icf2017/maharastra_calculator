@@ -158,3 +158,20 @@
   padding-bottom: 1% !important;
   margin-bottom: 1%;
 }
+
+.btn-dark {
+  font-size: 10px;
+  background-color: $brand;
+  border-color: $brand;
+  &:hover, &:active,
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active:focus{
+    background-color: darken($brand, 10%);
+    border-color: $brand; 
+  }
+}
+
+.wrapper{
+  background-color: $white;
+  padding: 12px;
+}

@@ -31,14 +31,14 @@
               %li.nav-item
                 %a.nav-link{href:'#', onclick:"twentyfifty.switchView('#{action}')"}= title
     .container.mt-48
-      .col-md-12
-        .row
+      .row 
+        .col-md-12
           %ol.breadcrumb
             %li.breadcrumb-item All Energy
             %li.breadcrumb-item Default Pathway
 
       .col-md-12
-        .row
+        .row.wrapper
           #display_table
             #display.diaplay_nav
           #results
