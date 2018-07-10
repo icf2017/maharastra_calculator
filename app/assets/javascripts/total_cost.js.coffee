@@ -4,7 +4,7 @@ class TotalCost
     @ready = false
   
   setup: () ->
-    document.getElementById("display_table").style.width = "10%"
+    document.getElementById("display_table").style.width = "15%"
     document.getElementById("results").style.width = "65%"
     document.getElementById("warning").style.width = "22%"
     $('#energy_container').empty()

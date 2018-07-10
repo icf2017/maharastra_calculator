@@ -4,7 +4,7 @@ class PrimaryEnergy
 
   setup: () ->
     $('#energy_container').empty()
-    document.getElementById("display_table").style.width = "10%"
+    document.getElementById("display_table").style.width = "15%"
     document.getElementById("results").style.width = "60%"
     document.getElementById("warning").style.width = "25%"
     $('#results').append("<div id='energy_container'></div>")

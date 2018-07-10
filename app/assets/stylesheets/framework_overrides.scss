@@ -6,7 +6,7 @@
 
 a.nav-link {
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .breadcrumb li {
@@ -19,10 +19,33 @@ div#total_percapita_emissions_map {
 }
 
 a.nav-link.active {
-  background-color: darken($gray-200, 10%);
-  border-radius: 15px;
+  background-color: $brand;
+  color: #fff !important;
 }
 
 .bg-grey {
-  background-color: $gray-200 !important;
+  background-color: $white !important;
+}
+
+.navbar-light .navbar-brand{
+  padding: 0;
+}
+
+.nav-item{
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.nav-item .nav-link{
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.mt-48{
+  margin-top: 48px;
 }
