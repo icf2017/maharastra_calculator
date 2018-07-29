@@ -3,7 +3,7 @@ lock '~> 3.10.1'
 
 set :application, 'IESS'
 
-set :repo_url, 'git@github.com:ronakjain90/iess_v2.git'
+set :repo_url, 'git@bitbucket.org:sonukry/maharastra_energy_tool.git'
 
 # Default branch is :master
 set :branch, :master
