@@ -1,6 +1,6 @@
-# KSEC 2050 Calculator
+# MSEC 2050 Calculator
 
-A web interface to the Karnataka State Energy Calculator 2050
+A web interface to the Maharashtra State Energy Calculator 2050
 
 Further detail on the project:
 http://indiaenergy.gov.in

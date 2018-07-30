@@ -114,7 +114,7 @@ class Model
 
     # use this function to reset all cell values
     attach_function 'reset', [], :void
-    # end of KSEC Main Sheet
+    # end of MSEC Main Sheet
     attach_function 'my_story_a1', [], ExcelValue.by_value
     attach_function 'my_story_a3', [], ExcelValue.by_value
     attach_function 'my_story_a5', [], ExcelValue.by_value
