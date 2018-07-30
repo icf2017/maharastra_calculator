@@ -32,11 +32,6 @@ set :ssh_options, {
 }
 
 namespace :deploy do
-  after :starting, :ensure_compiled_model do
-    on roles(:app) do
-      # execute "cd '#{release_path}'; /usr/local/rvm/bin/rvm default do ruby app/models/compile_c_version_if_needed.rb"
-    end
-  end
   after :publishing, :ensure_compiled_model do
     on roles(:app) do
       execute "cd '#{release_path}'; /usr/local/rvm/bin/rvm default do ruby app/models/translate_excel_into_c.rb"
