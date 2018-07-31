@@ -4,8 +4,8 @@ class TotalCost
     @ready = false
   
   setup: () ->
-    document.getElementById("display_table").style.width = "15%"
-    document.getElementById("results").style.width = "65%"
+    document.getElementById("display_table").style.width = "12%"
+    document.getElementById("results").style.width = "66%"
     document.getElementById("warning").style.width = "22%"
     $('#energy_container').empty()
     $('#results').append("<div id='energy_container'></div>")
