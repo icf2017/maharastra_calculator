@@ -18,8 +18,6 @@ set :pty, true
 
 set :log_level, :debug
 
-append :linked_files, 'app/models/libmodel.so'
-
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
 
@@ -34,8 +32,8 @@ set :ssh_options, {
 namespace :deploy do
   after :publishing, :ensure_compiled_model do
     on roles(:app) do
-      execute "cd '#{release_path}'; /usr/local/rvm/bin/rvm default do ruby app/models/translate_excel_into_c.rb"
-      execute "cd '#{release_path}'; /usr/local/rvm/bin/rvm default do ruby app/models/compile_c_version_of_excel.rb"
+      execute "cd '#{release_path}/app/models/'; /usr/local/rvm/bin/rvm default do ruby translate_excel_into_c.rb"
+      execute "cd '#{release_path}/app/models/'; /usr/local/rvm/bin/rvm default do ruby compile_c_version_of_excel.rb"
     end
   end
 end
