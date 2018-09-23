@@ -121,8 +121,8 @@ class MyStory
     $('#story_C_demand span').empty()
     $('#story_C_demand span').append(
       @pathway['my_story'][30][0] + ' ' + (@pathway['my_story'][30][1]).toFixed(2) + ' ' +
-      @pathway['my_story'][31][0] + ' ' + ((@pathway['my_story'][31][1]).toFixed(4)*100) + '% ' +
-      @pathway['my_story'][32][0] + ' ' + ((@pathway['my_story'][32][1]).toFixed(4)*100) + '% ' +
+      @pathway['my_story'][31][0] + ' ' + ((@pathway['my_story'][31][1]).toFixed(3)*100) + '% ' +
+      @pathway['my_story'][32][0] + ' ' + ((@pathway['my_story'][32][1]).toFixed(3)*100) + '% ' +
       @pathway['my_story'][33][0] + ' ' + ((@pathway['my_story'][33][1]*100).toFixed(2)) + '% ' +
       @pathway['my_story'][34][0] + ' ' + ((@pathway['my_story'][34][1]*100).toFixed(2)) + '% ' +
       @pathway['my_story'][35][0]
